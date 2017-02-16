@@ -1,0 +1,10 @@
+{% extends "@MyShopAdmin/layout.html.twig" %}
+
+{% block body %}
+<h2>Редактирование новости</h2>
+<form method="post" action="{{ path("my_shop_admin.news_edit", {id:news.getId()}) }}">
+    {{ form_widget(form) }}
+<input type="submit" value="Сохранить">
+
+</form>
+{% endblock %}

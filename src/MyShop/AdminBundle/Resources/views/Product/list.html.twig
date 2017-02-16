@@ -1,0 +1,28 @@
+{% extends "@MyShopAdmin/layout.html.twig" %}
+
+{% block body %}
+<a href="{{ path("my_shop_admin.product_add") }}">Добавить товар</a>
+    <table border="1">
+        <tr>
+            <td>Модель</td>
+            <td>Категория</td>
+            <td>Цена</td>
+        </tr>
+{% for product in productList %}
+
+        <tr>
+            <td><p>{{ product.model }}</p></td>
+            <td> <p> {{product.description}} </p></td>
+            <td> <p> {{product.price}}</p></td>
+
+        <td>
+            <a href="{{ path("my_shop_admin.product_delete", {id:product.id}) }}">Удалить</a><br/>
+            <a href="{{ path("my_shop_admin.product_edit", {id:product.id}) }}">Редактирование</a><br>
+            <a href="{{ path("my_shop_admin.product_photo_list", {idProduct:product.getId()}) }}">Управление картинками</a>
+        </td>
+        </tr>
+
+{% endfor %}
+    </table>
+{% endblock %}
+

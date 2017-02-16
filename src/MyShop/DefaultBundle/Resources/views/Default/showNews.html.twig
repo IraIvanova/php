@@ -1,0 +1,7 @@
+{% extends "@MyShopDefault/layout.html.twig" %}
+
+{% block body %}
+    <h2>Full news</h2>
+    <b>{{ news.getTitle() }}</b><br /> {{ news.getContent() }}<br />
+     date: {{ news.getDatePublished().format("d.m.Y H:i:s") }}
+{% endblock %}

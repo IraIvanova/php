@@ -1,0 +1,21 @@
+{% extends "@MyShopAdmin/layout.html.twig" %}
+
+{% block body %}
+<a href="{{ path("my_shop_admin.news_add") }}">Добавить новость</a><br /><br />
+
+
+    {% for news in newsList %}
+
+      <b>{{ news.getTitle() }}</b><br />
+
+        {{news.getShortDescription() }}<br />
+        {{news.getContent() }}<br />
+      {{news.getDatePublished().format("d.m.Y H:i:s") }}<br />
+
+            <a href="{{ path("my_shop_admin.news_delete", {id:news.id}) }}">Удалить</a><br/>
+            <a href="{{ path("my_shop_admin.news_edit", {id:news.id}) }}">Редактирование</a><br>
+            <a href="{{ path("my_shop_admin.news_photo_list", {idNews:news.getId()}) }}">Управление картинками</a><br /><br />
+
+{% endfor %}
+
+{% endblock %}

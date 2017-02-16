@@ -1,0 +1,28 @@
+my_shop_default_newsphoto:
+    resource: "@MyShopDefaultBundle/Resources/config/routing/newsphoto.yml"
+    prefix:   /newsphoto
+
+my_shop.product_info:
+    path: /product/{id}
+    defaults: { _controller: MyShopDefaultBundle:Default:showProduct }
+    methods: [GET]
+    requirements:
+        id: \d+
+
+myshop.product_list:
+    path: /product/list
+    defaults: { _controller: MyShopDefaultBundle:Default:showProductList }
+
+myshop.product_create:
+    path: /product/create
+    defaults: { _controller: MyShopDefaultBundle:Default:createProduct }
+
+my_shop.full_news:
+    path: /news/{id}
+    defaults: { _controller: MyShopDefaultBundle:Default:showNews }
+    requirements:
+        id: \d+
+
+myshop.news_list:
+    path: /news/list
+    defaults: { _controller: MyShopDefaultBundle:Default:showNewsList }

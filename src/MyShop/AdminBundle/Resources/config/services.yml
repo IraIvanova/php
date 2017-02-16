@@ -1,0 +1,9 @@
+services:
+    myshop_admin.check_img:
+        class: MyShop\AdminBundle\ImageCheck\CheckImg
+        arguments:
+          - "%upload_image_type_list%"
+
+    myshop_admin.name_generate:
+         class: MyShop\AdminBundle\ImageCheck\GenerateName
+

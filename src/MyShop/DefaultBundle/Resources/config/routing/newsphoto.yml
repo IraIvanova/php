@@ -1,0 +1,12 @@
+newsphoto_index:
+    path:     /
+    defaults: { _controller: "MyShopDefaultBundle:NewsPhoto:index" }
+    methods:  GET
+
+newsphoto_show:
+    path:     /{id}/show
+    defaults: { _controller: "MyShopDefaultBundle:NewsPhoto:show" }
+    methods:  GET
+
+
+

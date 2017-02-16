@@ -1,0 +1,10 @@
+{% extends "@MyShopAdmin/layout.html.twig" %}
+
+{% block body %}
+  <form action="{{ path("my_shop_admin.product_photo_edit",{idProduct:photo.id}) }}" method="post" >
+    {{ form_widget(form) }}
+
+      <input type="submit" value="Отправить">
+  </form>
+
+{% endblock %}
