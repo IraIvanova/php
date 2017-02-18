@@ -2,8 +2,26 @@ services:
     myshop_admin.check_img:
         class: MyShop\AdminBundle\ImageCheck\CheckImg
         arguments:
-          - "%upload_image_type_list%"
+            - "%upload_image_type_list%"
 
-    myshop_admin.name_generate:
-         class: MyShop\AdminBundle\ImageCheck\GenerateName
+    myshop_admin.image_name_generator:
+        class: MyShop\AdminBundle\ImageCheck\GenerateName
+
+    myshop_admin.image_uploader:
+         class:  MyShop\AdminBundle\ImageCheck\UploadImageService
+         arguments:
+            - "@myshop_admin.check_img"
+            - "@myshop_admin.image_name_generator"
+         calls:
+            - ["setUploadImageRootDir", ["%image_upload_dir%"]]
+
+
+    myshop_admin.twig_custom_extension_greeting:
+        class: MyShop\AdminBundle\Twig\Extension
+        public: false  
+        tags:
+            - { name: twig.extension }
+
+    
+ 
 

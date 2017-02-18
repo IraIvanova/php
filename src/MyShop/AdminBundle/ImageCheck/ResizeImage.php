@@ -8,6 +8,12 @@ use Doctrine\Common\Proxy\Exception\InvalidArgumentException;
 
 class ResizeImage
 {
-    
+    private $imageSizeList;
+
+    public function __construct($imageSizeList)
+    {
+        $this->imageSizeList = $imageSizeList;
+    }
+
 }
 

@@ -5,3 +5,6 @@ my_shop_admin:
 my_shop_default:
     resource: "@MyShopDefaultBundle/Resources/config/routing.yml"
     prefix:   /
+
+logout:
+     path:  logout      

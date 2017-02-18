@@ -36,9 +36,14 @@ class ProductController extends Controller
                // $session->start();
                 //Failed to start the session: already started by PHP.
                  
-                 $session= $this->get('session');
-                 $session->set('history', $this->get('session')->get('history') . "product added ");
+                 //$session= $this->get('session');
+                // $session->set('history', $this->get('session')->get('history') . "product added ");
                 
+$logger=$this->get("logger");
+$logger->addInfo(json_encode([
+    "product id"=> $product->getId(),
+    "price"=> $product->getPrice()
+]));
 
                 return $this->redirectToRoute("my_shop_admin.product_list");
             }

@@ -24,11 +24,11 @@ class ProductPhotoController extends Controller
     */
     public function addAction(Request $request, $idProduct)
     {
-        $manager = $this->getDoctrine()->getManager();
+         $manager = $this->getDoctrine()->getManager();
         $product = $manager->getRepository("MyShopDefaultBundle:Product")->find($idProduct);
         if ($product == null) {
             return $this->createNotFoundException("Product not found!");
-        }
+       }
 
         $photo = new ProductPhoto();
         $form = $this->createForm(ProductPhotoType::class, $photo);
@@ -36,50 +36,52 @@ class ProductPhotoController extends Controller
         if ($request->isMethod("POST"))
         {
             $form->handleRequest($request);
-
-            $filesAr = $request->files->get("myshop_defaultbundle_productphoto");
+            $filesArray = $request->files->get("myshop_defaultbundle_productphoto");
 
             /** @var UploadedFile $photoFile */
-             $photoFile = $filesAr["photoFile"];
-            $imageTypeCheckService= $this->get("myshop_admin.check_img");
-            $imageNameGenService= $this->get('myshop_admin.name_generate');
-            try{
-            $imageTypeCheckService->check($photoFile);
-            }
-           catch (\InvalidArgumentException $ex) {
-                die("Wrong image type!");
-            }
+            $photoFile = $filesArray["photoFile"];
 
-           $photoFileName = $product->getId() .  $imageNameGenService . "." . $photoFile->getClientOriginalExtension();+            $photoDirPath = $this->get("kernel")->getRootDir() . "/../web/photos/";
+            $imageCheckService = $this->get("myshop_admin.check_img");
+            
+            try{
+            $imageCheckService->check($photoFile);
+
+            }
+            catch(\InvalidArgumentException $ex)
+            {
+                die("Image loading error!!!!");
+            }
+            
+            $nameGenService = $this->get("myshop_admin.image_name_generator");
+            $photoFileName = $product->getId() . $nameGenService->genName() . "." . $photoFile->getClientOriginalExtension();
+
+            $photoDirPath = $this->get("kernel")->getRootDir() . "/../web/photos/";
 
             $photoFile->move($photoDirPath, $photoFileName);
-  
 
-             $img = new ImageResize($photoDirPath . $photoFileName);
-           $img->resizeToBestFit(250, 200);
-            $smallPhotoName = "small_" . $photoFileName;
-            $img->save($photoDirPath . $smallPhotoName);
+            $image= new ImageResize($photoDirPath . $photoFileName);
+            $image->resizeToHeight(200);
+            $smallFileName= "small_". $photoFileName;
+            $image->save($photoDirPath. $smallFileName);
 
-            $photo->setSmallFileName($smallPhotoName);
+            $image2 = new ImageResize($photoDirPath . $photoFileName);
+            $image2->resizeToHeight(400);
+            $mediumFileName = "medium_" . $photoFileName;
+            $image2->save($photoDirPath. $mediumFileName);
 
-$img1 = new ImageResize($photoDirPath . $photoFileName);
-           $img1->resizeToBestFit(300,350);
-            $mediumPhotoName = "small_" . $photoFileName;
-            $img1->save($photoDirPath . $mediumPhotoName);
-
-            $photo->setmediumFileName($mediumPhotoName);
-
-
+            $photo->setMediumFileName($mediumFileName);
+            $photo->setSmallFileName($smallFileName);
             $photo->setFileName($photoFileName);
             $photo->setProduct($product);
 
-           $manager->persist($photo);
-           $manager->flush();
-       }       
-       return [            
-           "form" => $form->createView(),
-           "product" => $product        
-           ];
+            $manager->persist($photo);
+            $manager->flush();
+        }
+
+        return [
+            "form" => $form->createView(),
+            "product" => $product
+        ];
            }
 
       

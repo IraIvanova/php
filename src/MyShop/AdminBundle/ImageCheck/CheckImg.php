@@ -3,7 +3,7 @@
 namespace MyShop\AdminBundle\ImageCheck;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Doctrine\Common\Proxy\Exception\InvalidArgumentException;
+
 
 /*
  array(3) {
@@ -34,40 +34,38 @@ class CheckImg
 {
     private $imageTypeList;
 
-    public function __construct($typeList)
+    public function __construct($imageTypeList)
     {
-
-       $this->imageTypeList = $typeList;
+        $this->imageTypeList = $imageTypeList;
     }
 
-    public function Check(UploadedFile $photoFile)
+    public function check(UploadedFile $photoFile)
     {
-        $checkTrue= false;
+        $checkTrue = false;
         $mimeType = $photoFile->getClientMimeType();
-        foreach($this->imageTypeList as $imgType) {
-            $checkTrue = false;
+        foreach ($this->imageTypeList as $imgType) {
             if ($mimeType == $imgType[1]) {
                 $checkTrue = true;
             }
         }
-            if($checkTrue !== true)
-            {
-                throw new \InvalidArgumentException("MimeType is blocked!");
-            }
+        if ($checkTrue !== true) {
+            throw new \InvalidArgumentException("Mime type is blocked!");
+        }
 
         $fileExt = $photoFile->getClientOriginalExtension();
-        $checkTrue= false;
-        foreach($this->imageTypeList as $imgType) {
+        $checkTrue = false;
+        foreach ($this->imageTypeList as $imgType) {
             if ($fileExt == $imgType[0]) {
                 $checkTrue = true;
             }
         }
-            if($checkTrue !== true)
-            {
-                throw new \InvalidArgumentExcepton("Extension is blocked!");
-            }
+
+        if ($checkTrue == false) {
+            throw new \InvalidArgumentException("Extension is blocked!");
+        }
 
         return true;
     }
 }
+
 

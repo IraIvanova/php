@@ -34,12 +34,98 @@ class CategoryController extends Controller
             $manager->persist($category);
             $manager->flush();
 
-            return $this->redirectToRoute("my_shop_admin.category_list");
+            return $this->redirectToRoute("my_shop_admin.category_list", ["idParentCategory"=> $idParent]);
         }
 
         return ["form" => $form->createView(),
             "idParent" => $idParent];
     }
+
+   /**
+    * @Template()
+    */
+public function treeAction()
+{
+    $categoryList= $this->getDoctrine()->getRepository("MyShopDefaultBundle:Category")->findAll();
+    $jsonArray = [];
+
+foreach($categoryList as $cat){
+  if($cat->getParentCategory() !== null){
+      $idParent= $cat->getParentCategory()->getId();
+  }
+  else{
+      $idParent = "#";
+  }
+   $jsonArray[]=[
+       "id"=>$cat->getId(),
+       "parent" =>$idParent,
+       "text" => $cat->getName()
+   ];
+}  
+
+$jsonCode = json_encode($jsonArray);
+
+    return [
+        "categoryListJson" => $jsonCode
+    ];
+}
+
+
+ /**
+    * @Template()
+    */
+public function listAction($idParentCategory = null)
+{
+    $manager =$this->getDoctrine()->getManager();
+     $listData= [];
+
+     if(is_null($idParentCategory)){
+      
+        $listData["categoryList"]= $manager->createQuery("select cat from MyShopDefaultBundle:Category cat where cat.parentCategory is null")->getResult();
+     }
+     else{
+$parentCategory = $manager->getRepository("MyShopDefaultBundle:Category")->find($idParentCategory);
+$listData["categoryList"]= $parentCategory->getChildrenCategories();
+$listData["parentCategory"] = $parentCategory;
+     }
+     
+return  $listData;
+}
+
+
+
+    /**
+     * @Template()
+     */
+public function editAction(Request $request,$id)
+{
+    $category= $this->getDoctrine()->getRepository("MyShopDefaultBundle:Category")->find($id);
+
+$form = $this->createForm(CategoryType::class, $category);
+
+        if ($request->isMethod("POST"))
+        {
+            $form->handleRequest($request);
+
+            $manager = $this->getDoctrine()->getManager();
+            
+            return $this->redirectToRoute("my_shop_admin.category_edit");
+        }
+
+        return ["form" => $form->createView(),
+            "category" => $category];
+}
+
+public function deleteAction(Request $request,$id)
+ {
+$category = $this->getDoctrine()->getRepository("MyShopDefaultBundle:Category")->find($id);
+$manager=$this->getDoctrine()->getManager();
+$manager->remove($category);
+$manager->flush();
+
+return $this->redirectToRoute("my_shop_admin.category_list");
+
+ }
 
     /**
      * @Template()
@@ -53,7 +139,7 @@ class CategoryController extends Controller
     /**
      * @Template()
      */
-    public function listAction()
+  /*  public function listAction()
     {
         $categoryList = $this->getDoctrine()
             ->getManager()
@@ -61,7 +147,7 @@ class CategoryController extends Controller
             ->getResult();
 
         return ["categoryList" => $categoryList];
-    }
+    }*/
 
 }
 

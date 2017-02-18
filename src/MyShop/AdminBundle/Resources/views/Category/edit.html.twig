@@ -1,0 +1,7 @@
+{% extends "@MyShopAdmin/layout.html.twig" %}{% block body %}
+
+<form action="{{ path("my_shop_admin.category_add", {id:category.id}) }}" method="POST">
+    {{ form_widget(form) }}
+    <input type="submit"/>
+</form>
+{% endblock %}

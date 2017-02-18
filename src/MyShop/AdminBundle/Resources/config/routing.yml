@@ -1,5 +1,5 @@
 my_shop_admin.index:
-    path:   /home
+    path:   /
     defaults: { _controller: MyShopAdminBundle:Default:index }
 
 my_shop_admin.product_add:
@@ -31,10 +31,6 @@ my_shop_admin.product_edit:
 my_shop_admin.category_add:
     path:   /category/add/{idParent}
     defaults: { _controller: MyShopAdminBundle:Category:add, idParent:null }
-
-my_shop_admin.category_list:
-    path:   /category/list
-    defaults: { _controller: MyShopAdminBundle:Category:list }
 
 my_shop_admin.news_add:
     path:   /news/add
@@ -123,3 +119,23 @@ my_shop_admin.product_icon_add:
     defaults: { _controller: MyShopAdminBundle:Product:createIcon }
     requirements:
         idProduct: \d+
+
+my_shop_admin.category_list:
+    path:   /category/list/{idParentCategory}
+    defaults: { _controller: MyShopAdminBundle:Category:list, idParentCategory:null }
+
+my_shop_admin.tree:
+    path:   /category/tree 
+    defaults: { _controller: MyShopAdminBundle:Category:tree }
+        
+my_shop_admin.category_edit:
+    path:   /category/{id}/edit
+    defaults: { _controller: MyShopAdminBundle:Category:edit  }
+
+my_shop_admin.category_delete:
+    path:   /category/{id}/delete
+    defaults: { _controller: MyShopAdminBundle:Category:delete }
+
+login:
+    path:   /login
+    defaults: { _controller: MyShopAdminBundle:Login:login }
