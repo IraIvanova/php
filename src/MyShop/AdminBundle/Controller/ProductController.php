@@ -32,17 +32,36 @@ class ProductController extends Controller
                 $manager->persist($product);
                 $manager->flush();
 
-               // $session = new Session();
-               // $session->start();
-                //Failed to start the session: already started by PHP.
-                 
-                 //$session= $this->get('session');
-                // $session->set('history', $this->get('session')->get('history') . "product added ");
-                
-$logger=$this->get("logger");
-$logger->addInfo(json_encode([
-    "product id"=> $product->getId(),
-    "price"=> $product->getPrice()
+                $mailSender= $this->get("myshop_admin.mail_sender");
+
+                $model= ['model'=>$product->getModel()];
+                $format = "text/html";
+                $mailSender->sendMail("avonavis@gmail.com", "igorphphillel@gmail.com",$model, $format);
+
+                /*$message = new \Swift_Message();
+                $message->setTo("avonavis@gmail.com");
+                $message->addFrom("igorphphillel@gmail.com");
+                $message->setBody(
+                    $this->renderView(
+                     'MyShopAdminBundle:Email:index.html.twig',
+                        array('model' => $product->getModel())
+                    ),
+                    'text/html'
+                );
+                $mailer = $this->get("mailer");
+
+                $mailer->send($message);*/
+
+
+                $session= $this->get('session');
+                 $session->set('history', $this->get('session')->get('history') . "product added. ");
+
+                $this->addFlash("success",'Product added!');
+
+                $logger=$this->get("logger");
+                $logger->addInfo(json_encode([
+                "product id"=> $product->getId(),
+                "price"=> $product->getPrice()
 ]));
 
                 return $this->redirectToRoute("my_shop_admin.product_list");
@@ -62,6 +81,8 @@ $logger->addInfo(json_encode([
         $manager->remove($product);
         $manager->flush();
 
+        $session= $this->get('session');
+        $session->set('history', $this->get('session')->get('history') . "product removed. ");
         return $this->redirectToRoute("my_shop_admin.product_list");
     }
 
@@ -84,9 +105,9 @@ $logger->addInfo(json_encode([
                 $manager->persist($product);
                 $manager->flush();
 
-                $session= $this->get('session');
-                 $session->set('history', $this->get('session')->get('history').'< br />product update ');
 
+                $session= $this->get('session');
+                $session->set('history', $this->get('session')->get('history') . "product edit.");
                 return $this->redirectToRoute("my_shop_admin.product_list");
             }
         }
@@ -168,4 +189,6 @@ $session= $this->get('session');
         ];
 
     }
+
+
 }

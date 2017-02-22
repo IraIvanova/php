@@ -39,7 +39,7 @@ class CheckImg
         $this->imageTypeList = $imageTypeList;
     }
 
-    public function check(UploadedFile $photoFile)
+    public function check($photoFile)
     {
         $checkTrue = false;
         $mimeType = $photoFile->getClientMimeType();

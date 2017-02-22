@@ -8,6 +8,11 @@
             <td>Категория</td>
             <td>Цена</td>
         </tr>
+        {% for message in app.session.flashBag.get("success") %}
+        <div>
+            {{ message }}
+        </div>
+        {% endfor %}
 {% for product in productList %}
 
         <tr>

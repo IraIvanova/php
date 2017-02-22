@@ -14,12 +14,21 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $viewData = [];
-        $session = $this->get('session');
-
-        if ($session->has('history'))
-        {
+        $session = $this->get('session')->get('history');
+var_dump($session);
+die();
+        if ($session->has('history')) {
             $viewData['history'] = $session->get('history');
+
+
+
+
+
+
         }
-        return $viewData;
-    }
+ return ["new_array" =>$new_array];
+}
+
+
+
 }

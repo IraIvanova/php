@@ -4,6 +4,7 @@ namespace MyShop\AdminBundle\Controller;
 
 use Doctrine\Common\Proxy\Exception\InvalidArgumentException;
 
+use MyShop\AdminBundle\MyShopAdminBundle;
 use MyShop\DefaultBundle\Entity\ProductPhoto;
 use MyShop\DefaultBundle\Form\ProductPhotoType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -11,30 +12,29 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\Mapping as ORM;
-use \Eventviva\ImageResize;
-use MyShop\AdminBundle\ImageCheck\CheckImg;
+
+
 
 
 class ProductPhotoController extends Controller
 {
 
-    
+
     /**
      * @Template()
-    */
+     */
     public function addAction(Request $request, $idProduct)
     {
-         $manager = $this->getDoctrine()->getManager();
+        $manager = $this->getDoctrine()->getManager();
         $product = $manager->getRepository("MyShopDefaultBundle:Product")->find($idProduct);
         if ($product == null) {
             return $this->createNotFoundException("Product not found!");
-       }
+        }
 
         $photo = new ProductPhoto();
         $form = $this->createForm(ProductPhotoType::class, $photo);
 
-        if ($request->isMethod("POST"))
-        {
+        if ($request->isMethod("POST")) {
             $form->handleRequest($request);
             $filesArray = $request->files->get("myshop_defaultbundle_productphoto");
 
@@ -42,49 +42,35 @@ class ProductPhotoController extends Controller
             $photoFile = $filesArray["photoFile"];
 
             $imageCheckService = $this->get("myshop_admin.check_img");
-            
-            try{
-            $imageCheckService->check($photoFile);
 
-            }
-            catch(\InvalidArgumentException $ex)
-            {
+            try {
+                $imageCheckService->check($photoFile);
+
+            } catch (\InvalidArgumentException $ex) {
                 die("Image loading error!!!!");
             }
-            
-            $nameGenService = $this->get("myshop_admin.image_name_generator");
-            $photoFileName = $product->getId() . $nameGenService->genName() . "." . $photoFile->getClientOriginalExtension();
 
-            $photoDirPath = $this->get("kernel")->getRootDir() . "/../web/photos/";
+            $result = $this->get("myshop_admin.image_uploader")->uploadImage($photoFile, $idProduct);
 
-            $photoFile->move($photoDirPath, $photoFileName);
-
-            $image= new ImageResize($photoDirPath . $photoFileName);
-            $image->resizeToHeight(200);
-            $smallFileName= "small_". $photoFileName;
-            $image->save($photoDirPath. $smallFileName);
-
-            $image2 = new ImageResize($photoDirPath . $photoFileName);
-            $image2->resizeToHeight(400);
-            $mediumFileName = "medium_" . $photoFileName;
-            $image2->save($photoDirPath. $mediumFileName);
-
-            $photo->setMediumFileName($mediumFileName);
-            $photo->setSmallFileName($smallFileName);
-            $photo->setFileName($photoFileName);
+            $photo->setMediumFileName($result->getMediumFileName());
+            $photo->setSmallFileName($result->getSmallFilename());
+            $photo->setFileName($result->getBigFileName());
             $photo->setProduct($product);
 
             $manager->persist($photo);
             $manager->flush();
+
+            $session= $this->get('session');
+            $session->set('history', $this->get('session')->get('history') . "product photo added. ");
         }
 
         return [
             "form" => $form->createView(),
             "product" => $product
         ];
-           }
+    }
 
-      
+
     /**
      * @Template()
      */
@@ -101,41 +87,95 @@ class ProductPhotoController extends Controller
     /**
      * @Template()
      */
-    public function editAction(Request $request,$idProduct)
+    public function editAction(Request $request, $id)
     {
-        $photo= $this->getDoctrine()->getRepository("MyShopDefaultBundle:ProductPhoto")
-            ->find($idProduct);
+        $photo = $this->getDoctrine()->getRepository("MyShopDefaultBundle:ProductPhoto")->find($id);
+
+        //$product = $photo->getProduct();
+
 
         $form = $this->createForm(ProductPhotoType::class, $photo);
+
         if ($request->isMethod("POST")) {
             $form->handleRequest($request);
+
+            $filesArray = $request->files->get("myshop_defaultbundle_productphoto");
+
+
+            /** @var UploadedFile $photoFile */
+            $photoFile = $filesArray["photoFile"];
+
+            $imageCheckService = $this->get("myshop_admin.check_img");
+
+            try {
+                $imageCheckService->check($photoFile);
+
+            } catch (\InvalidArgumentException $ex) {
+                die("Image loading error!!!!");
+            }
+
+            $result = $this->get("myshop_admin.image_uploader")->uploadImage($photoFile, $id);
+
+            $photo->setMediumFileName($result->getMediumFileName());
+            $photo->setSmallFileName($result->getSmallFilename());
+            $photo->setFileName($result->getBigFileName());
+
+            $photo->setProduct($product);
 
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($photo);
             $manager->flush();
-
-            return $this->redirectToRoute("my_shop_admin.product_list");
         }
+
         return [
             "form" => $form->createView(),
+            //"product" => $product,
             "photo" => $photo
         ];
     }
 
-
     public function deleteAction($id)
     {
 
-        $photo= $this->getDoctrine()->getRepository("MyShopDefaultBundle:ProductPhoto")
-->find($id);
+        $photo = $this->getDoctrine()->getRepository("MyShopDefaultBundle:ProductPhoto")
+            ->find($id);
 
         $manager = $this->getDoctrine()->getManager();
-             $manager->remove($photo);
-             $manager->flush();
+        $manager->remove($photo);
+        $manager->flush();
 
         return $this->redirectToRoute("my_shop_admin.product_list");
     }
 
+    public function sendMailAction($id)
+    {
+        $photo = $this->getDoctrine()->getManager()->getRepository("MyShopDefaultBundle:ProductPhoto")->find($id);
+
+        $photoFile = $this->get("kernel")->getRootDir() . "/../web/photos/" . $photo->getFileName();
+        $message = new \Swift_Message();
+        $message->setTo("avonavis@gmail.com");
+        $message->addFrom("avonavis@gmail.com");
+        $message->setBody("welcome to our online-shop!", "text/html");
+        $message->attach(\Swift_Attachment::fromPath($photoFile));
+        $mailer = $this->get("mailer");
+
+        $mailer->send($message);
 
 
+        $idProduct = $photo->getProduct()->getId();
+
+
+        return $this->redirectToRoute("my_shop_admin.product_photo_list", [
+            'idProduct' => $idProduct,
+            "photo" =>$photo
+        ]);
+    }
+
+
+
+//        $htmlResult = $this->renderView("MyShopAdminBundle::email.html.twig", [
+//            "name" => "Svetlana"
+//        ]);
+
+    //$message->setBody($htmlResult, "text/html");
 }

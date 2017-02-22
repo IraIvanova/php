@@ -12,8 +12,9 @@
                 <img src="/photos/{{ photo.getFileName() }}" />
             </td>
 <td>
-    <a href="{{ path("my_shop_admin.product_photo_edit", {idProduct:photo.id}) }}">Редактирование</a>
-    <a href="{{ path("my_shop_admin.product_photo_delete", {id:photo.id} ) }}">Удалить</a>
+    <a href="{{ path("my_shop_admin.product_photo_edit", {id:photo.id}) }}">Редактирование</a><br />
+    <a href="{{ path("my_shop_admin.product_photo_delete", {id:photo.id} ) }}">Удалить</a><br />
+    <a href="{{ path("my_shop_admin.sendmail", {id:photo.id} ) }}">Send Email</a>
 </td>
         </tr>
 
