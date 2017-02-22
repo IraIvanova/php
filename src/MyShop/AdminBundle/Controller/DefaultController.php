@@ -14,19 +14,36 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $viewData = [];
-        $session = $this->get('session')->get('history');
-var_dump($session);
-die();
-        if ($session->has('history')) {
-            $viewData['history'] = $session->get('history');
-
-
-
-
-
-
+        $session = $this->get('session');
+        if ($session->has("notification"))
+        {
+            $viewData = $session->get('notification');
         }
- return ["new_array" =>$new_array];
+
+$new=explode(".", $viewData);
+        $newArr = array_slice($new, -5, 5);
+        $string = implode(" | ", $newArr);
+
+
+
+        $message = new \Swift_Message();
+        $message->setTo("avonavis@gmail.com");
+        $message->addFrom("igorphphillel@gmail.com");
+        $message->setBody(
+            $this->renderView(
+                'MyShopAdminBundle:Email:index.html.twig',
+                array('model' => $string)
+            ),
+            'text/html'
+        );
+        $mailer = $this->get("mailer");
+
+        $mailer->send($message);
+
+
+
+
+ return ["newArr"=> $newArr];
 }
 
 

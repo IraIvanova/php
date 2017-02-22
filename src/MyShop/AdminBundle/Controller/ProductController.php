@@ -32,7 +32,7 @@ class ProductController extends Controller
                 $manager->persist($product);
                 $manager->flush();
 
-                $mailSender= $this->get("myshop_admin.mail_sender");
+               $mailSender= $this->get("myshop_admin.mail_sender");
 
                 $model= ['model'=>$product->getModel()];
                 $format = "text/html";
@@ -54,7 +54,7 @@ class ProductController extends Controller
 
 
                 $session= $this->get('session');
-                 $session->set('history', $this->get('session')->get('history') . "product added. ");
+                 $session->set('notification', $this->get('session')->get('notification') . "product added. ");
 
                 $this->addFlash("success",'Product added!');
 
@@ -82,7 +82,7 @@ class ProductController extends Controller
         $manager->flush();
 
         $session= $this->get('session');
-        $session->set('history', $this->get('session')->get('history') . "product removed. ");
+        $session->set('notification', $this->get('session')->get('notification') . "product removed. ");
         return $this->redirectToRoute("my_shop_admin.product_list");
     }
 
@@ -107,7 +107,7 @@ class ProductController extends Controller
 
 
                 $session= $this->get('session');
-                $session->set('history', $this->get('session')->get('history') . "product edit.");
+                $session->set('notification', $this->get('session')->get('notification') . "product edit.");
                 return $this->redirectToRoute("my_shop_admin.product_list");
             }
         }

@@ -61,7 +61,7 @@ class ProductPhotoController extends Controller
             $manager->flush();
 
             $session= $this->get('session');
-            $session->set('history', $this->get('session')->get('history') . "product photo added. ");
+            $session->set('notification', $this->get('session')->get('notification') . "product photo added. ");
         }
 
         return [
