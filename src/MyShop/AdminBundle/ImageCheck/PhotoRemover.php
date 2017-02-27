@@ -9,20 +9,32 @@ use MyShop\DefaultBundle\Form\ProductPhotoType;
 
 class PhotoRemover
 {
+   private $manager;
 
-    private $manager;
-    private $pathDir;
+   private $pathDir;
+   public function __construct(EntityManager $em, $pathDir )
+   {
+       $this->manager =$em;
+       $this->pathDir = $pathDir;
+   }
 
-    public function __construct(EntityManager $em, $pathDir)
+    public function removePhoto($pathDir, $photoFileName)
     {
-        $this->manager = $em;
-        $this->pathDir= $pathDir;
-    }
 
-    public function removePhoto($photoFileName)
-    {
+        $photoFile= $pathDir . $photoFileName;
+        $smallFileName= "small_". $photoFileName;
+        $mediumFileName = "medium_". $photoFileName;
+        $smallPhotoFile= $pathDir . $smallFileName;
+        $mediumPhotoFile = $pathDir . $mediumFileName;
 
-        $manager->remove($photo);
-        $manager->flush();
+        unlink($photoFile);
+
+        unlink($smallPhotoFile);
+
+        unlink($mediumPhotoFile);
+
+
+
+
     }
 }

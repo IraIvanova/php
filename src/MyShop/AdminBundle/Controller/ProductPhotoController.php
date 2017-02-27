@@ -90,49 +90,36 @@ class ProductPhotoController extends Controller
     public function editAction(Request $request, $id)
     {
         $photo = $this->getDoctrine()->getRepository("MyShopDefaultBundle:ProductPhoto")->find($id);
-
         //$product = $photo->getProduct();
-
-
         $form = $this->createForm(ProductPhotoType::class, $photo);
-
         if ($request->isMethod("POST")) {
             $form->handleRequest($request);
-
             $filesArray = $request->files->get("myshop_defaultbundle_productphoto");
-
-
             /** @var UploadedFile $photoFile */
             $photoFile = $filesArray["photoFile"];
-
             $imageCheckService = $this->get("myshop_admin.check_img");
-
             try {
                 $imageCheckService->check($photoFile);
-
             } catch (\InvalidArgumentException $ex) {
                 die("Image loading error!!!!");
             }
-
             $result = $this->get("myshop_admin.image_uploader")->uploadImage($photoFile, $id);
-
             $photo->setMediumFileName($result->getMediumFileName());
             $photo->setSmallFileName($result->getSmallFilename());
             $photo->setFileName($result->getBigFileName());
-
-            $photo->setProduct($product);
-
+            //$photo->setProduct($product);
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($photo);
             $manager->flush();
         }
-
         return [
             "form" => $form->createView(),
             //"product" => $product,
             "photo" => $photo
         ];
     }
+
+
 
     public function deleteAction($id)
     {

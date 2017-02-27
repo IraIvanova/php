@@ -4,6 +4,7 @@ namespace MyShop\DefaultBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Product
@@ -26,6 +27,7 @@ class Product
      * @var string
      *
      * @ORM\Column(name="model", type="string", length=255)
+     * @Assert\NotBlank(message="Поле oбязательное для заполнение")
      */
     private $model;
 
@@ -33,6 +35,11 @@ class Product
      * @var float
      *
      * @ORM\Column(name="price", type="float")
+     * @Assert\Length(
+     *     min="2",
+     *     max="255",
+     *     minMessage="Too short price",
+     *     maxMessage="Too long price")
      */
     private $price;
 
@@ -66,18 +73,12 @@ class Product
     private $photos;
 
     /**
-     * @var IconPhoto
+     * @var string
      *
-     * @ORM\ManyToOne(targetEntity="MyShop\DefaultBundle\Entity\IconPhoto", inversedBy="iconList")
-     * @ORM\JoinColumn(name="id_icon_file", referencedColumnName="id" )
+     * @ORM\Column(name="icon_file_name", type="string", length=255, nullable=true)
      */
     private $iconFileName;
-    /**
-     * @var ArrayCollection
-     *
-     * @ORM\OneToMany(targetEntity="MyShop\DefaultBundle\Entity\IconPhoto", mappedBy="product")
-     */
-    private $iconPhotos;
+
 
 
 

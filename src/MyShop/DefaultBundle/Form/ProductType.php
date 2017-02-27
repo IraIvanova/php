@@ -33,6 +33,12 @@ class ProductType extends AbstractType
                 "choice_label" => "name",
                 "label" => "Категория"
             ])
+            ->add('iconFile', FileType::class, [
+                'mapped' => false,
+                'label' => 'Иконка к товару',
+                'required' => false
+            ])
+
 
             ;
     }

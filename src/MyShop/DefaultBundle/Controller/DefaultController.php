@@ -73,6 +73,7 @@ class DefaultController extends Controller
         ];
     }
 
+
     /**
      * @Template()
      */

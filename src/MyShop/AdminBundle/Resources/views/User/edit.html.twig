@@ -1,0 +1,9 @@
+{% extends "@MyShopAdmin/layout.html.twig" %}
+
+{% block body %}
+<h3>Edit user</h3>
+<form method="post" action="{{ path('my_shop_admin.user_edit', {id:user.id}) }}">
+{{ form_widget(form) }}
+    <input type="submit" />
+</form>
+{% endblock %}

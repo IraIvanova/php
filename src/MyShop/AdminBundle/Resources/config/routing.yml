@@ -155,3 +155,19 @@ my_shop_admin.sendmail:
 my_shop_admin.user_add:
     path:   /user/add
     defaults: { _controller: MyShopAdminBundle:User:add }
+
+my_shop_admin.user_edit:
+    path:   /user/{id}/edit
+    defaults: { _controller: MyShopAdminBundle:User:edit }
+    requirements:
+            id: \d+
+
+my_shop_admin.user_delete:
+    path:   /user/{id}/delete
+    defaults: { _controller: MyShopAdminBundle:User:delete }
+    requirements:
+            id: \d+
+
+my_shop_admin.user_list:
+    path:   /user/list
+    defaults: { _controller: MyShopAdminBundle:User:userList }

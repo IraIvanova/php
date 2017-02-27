@@ -14,7 +14,7 @@ class MailSender
         $this->mailer= $mailer;
     }
 
-    public function sendMail($sendTo, $sendFrom, $content, $type)
+    public function sendMail($sendTo, $sendFrom, $content, $type="text/html")
     {
         $message = new \Swift_Message();
         $message->setTo($sendTo);

@@ -20,7 +20,7 @@ class DefaultController extends Controller
             $viewData = $session->get('notification');
         }
 
-$new=explode(".", $viewData);
+        $new=explode(".", $viewData);
         $newArr = array_slice($new, -5, 5);
         $string = implode(" | ", $newArr);
 

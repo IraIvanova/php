@@ -14,6 +14,7 @@
                 <li><a href="{{ path("my_shop_admin.product_list") }}">Товары</a></li>
                 <li><a href="{{ path("my_shop_admin.category_list") }}">Категории товаров</a></li>
                 <li><a href="{{ path("my_shop_admin.news_category_list") }}">Категории новостей</a></li>
+                <li><a href="{{ path("my_shop_admin.user_list") }}">User List</a></li>
                  {{ "Max"|greetings }}
             </ul>
         </td>
@@ -23,7 +24,9 @@
 {{ mes }}
 {% endfor %}
 
-
+            {% for flash_message in app.session.flashBag.get('error') %}
+                <b style="color: red">Ошибка!</b> {{ flash_message }}<br>
+            {% endfor %}
 
             {% block body %}
             {% endblock %}
