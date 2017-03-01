@@ -26,3 +26,15 @@ my_shop.full_news:
 myshop.news_list:
     path: /news/list
     defaults: { _controller: MyShopDefaultBundle:Default:showNewsList }
+
+myshop.api.product_details:
+    path:   /api/rest/product/{id}.json
+    defaults: { _controller: MyShopDefaultBundle:API/REST/Product:productDetails }
+
+myshop.api.product_details_xml:
+    path:   /api/rest/product/{id}.xml
+    defaults: { _controller: MyShopDefaultBundle:API/REST/Product:productDetailsXML }
+
+myshop.api.json_rpc:
+    path:   /api/jsonrpc
+    defaults: { _controller: MyShopDefaultBundle:API/JsonRPC/JsonRPC:index }

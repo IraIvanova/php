@@ -84,12 +84,12 @@ class ProductController extends Controller
                 $mailer->send($message);*/
 
 
-                /*$session= $this->get('session');
+                $session= $this->get('session');
                  $session->set('notification', $this->get('session')->get('notification') . "product added. ");
 
                 $this->addFlash("success",'Product added!');
 
-                $logger=$this->get("logger");
+              /*  $logger=$this->get("logger");
                 $logger->addInfo(json_encode([
                 "product id"=> $product->getId(),
                 "price"=> $product->getPrice(

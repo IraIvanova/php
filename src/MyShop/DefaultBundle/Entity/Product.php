@@ -27,7 +27,7 @@ class Product
      * @var string
      *
      * @ORM\Column(name="model", type="string", length=255)
-     * @Assert\NotBlank(message="Поле oбязательное для заполнение")
+     * @Assert\NotBlank(message="Can not be null!")
      */
     private $model;
 
@@ -40,6 +40,9 @@ class Product
      *     max="255",
      *     minMessage="Too short price",
      *     maxMessage="Too long price")
+     * @Assert\Type(
+     *     type="float",
+     *     message="The value {{ value }} is not a valid {{ type }}")
      */
     private $price;
 
@@ -54,6 +57,7 @@ class Product
      * @var \DateTime
      *
      * @ORM\Column(name="dateCreatedAt", type="datetime")
+     * @Assert\Date()
      */
     private $dateCreatedAt;
 
@@ -69,6 +73,7 @@ class Product
      * @var ArrayCollection
      *
      * @ORM\OneToMany(targetEntity="MyShop\DefaultBundle\Entity\ProductPhoto", mappedBy="product")
+     *
      */
     private $photos;
 

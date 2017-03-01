@@ -13,11 +13,11 @@ class DefaultController extends Controller
     */
     public function indexAction()
     {
-        $viewData = [];
+        $viewData = " ";
         $session = $this->get('session');
         if ($session->has("notification"))
         {
-            $viewData = $session->get('notification');
+            $viewData= $session->get('notification');
         }
 
         $new=explode(".", $viewData);
