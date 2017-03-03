@@ -12,7 +12,25 @@ use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
+    /**
+     * @Template()
+     */
+    public function indexAction()
+    {
+        $doctrine = $this->getDoctrine();
+        $manager = $doctrine->getManager();
 
+        $repository = $manager->getRepository("MyShopDefaultBundle:Product");
+
+        $productList = $repository->findAll();
+
+
+        return [
+            "productList" => $productList
+
+        ];
+
+    }
 
     public function createProductAction()
     {
@@ -45,6 +63,8 @@ class DefaultController extends Controller
         $product = $repository->find($id);
 
         $photo= $product->getPhotos();
+
+
 
 
 

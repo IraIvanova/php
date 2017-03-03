@@ -279,37 +279,4 @@ class Product
         return $this->iconFileName;
     }
 
-    /**
-     * Add iconPhoto
-     *
-     * @param \MyShop\DefaultBundle\Entity\IconPhoto $iconPhoto
-     *
-     * @return Product
-     */
-    public function addIconPhoto(\MyShop\DefaultBundle\Entity\IconPhoto $iconPhoto)
-    {
-        $this->iconPhotos[] = $iconPhoto;
-
-        return $this;
-    }
-
-    /**
-     * Remove iconPhoto
-     *
-     * @param \MyShop\DefaultBundle\Entity\IconPhoto $iconPhoto
-     */
-    public function removeIconPhoto(\MyShop\DefaultBundle\Entity\IconPhoto $iconPhoto)
-    {
-        $this->iconPhotos->removeElement($iconPhoto);
-    }
-
-    /**
-     * Get iconPhotos
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getIconPhotos()
-    {
-        return $this->iconPhotos;
-    }
 }

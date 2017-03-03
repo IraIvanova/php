@@ -44,18 +44,17 @@ class ProductController extends Controller
                     }
                     return $this->redirectToRoute("my_shop_admin.product_add");
                 }
-
+$productId= $product->getId();
                 $filesAr = $request->files->get("myshop_defaultbundle_product");
 
                 /** @var UploadedFile $iconFile */
 
                 $iconFile = $filesAr["iconFile"];
 
+                $result = $this->get("myshop_admin.image_uploader")->uploadImage($iconFile, $productId);
 
-                $dir = $this->get("kernel")->getRootDir() . '/../web/photos/';
-                $iconFileName = rand(10000, 999999) . '.' . $iconFile->getClientOriginalExtension();
-                $iconFile->move($dir, $iconFileName);
-                $product->setIconFileName($iconFileName);
+
+                $product->setIconFileName($result->getIconFileName());
 
 
                 $manager = $this->getDoctrine()->getManager();

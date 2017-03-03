@@ -44,13 +44,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="agileits_header">
     <div class="container">
         <div class="w3l_offers">
-            <p>SALE UP TO 70% OFF. USE CODE "SALE70%" . <a href="#">SHOP NOW</a></p>
+            <p>СКИДКИ до 70% . Используй код "SALE70%" . <a href="#">Купить сейчас</a></p>
         </div>
         <div class="agile-login">
             <ul>
-                <li><a href="#"> Create Account </a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="#"> Создать аккаунт </a></li>
+                <li><a href="#">Войти</a></li>
+                <li><a href="#">Помощь</a></li>
 
             </ul>
         </div>
@@ -69,7 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="w3ls_logo_products_left1">
             <ul class="phone_email">
-                <li><i class="fa fa-phone" aria-hidden="true"></i>Order online or call us : (+0123) 234 567</li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i>Связаться с нами : (+0123) 234 567</li>
 
             </ul>
         </div>
@@ -105,10 +105,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="{{ path("myshop.product_list") }}" class="act">Home</a></li>
+                    <li class="active"><a href="{{ path("myshop.index_page") }}" class="act">Главная</a></li>
                     <!-- Mega Menu -->
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Groceries<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Телефоны <b class="caret"></b></a>
                         <ul class="dropdown-menu multi-column columns-3">
                             <div class="row">
                                 <div class="multi-gd-img">
@@ -127,7 +127,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Household<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Фото и видео <b class="caret"></b></a>
                         <ul class="dropdown-menu multi-column columns-3">
                             <div class="row">
                                 <div class="multi-gd-img">
@@ -147,7 +147,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Personal Care<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Телевизоры<b class="caret"></b></a>
                         <ul class="dropdown-menu multi-column columns-3">
                             <div class="row">
                                 <div class="multi-gd-img">
@@ -166,7 +166,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Packaged Foods<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ноутбуки и компьютеры<b class="caret"></b></a>
                         <ul class="dropdown-menu multi-column columns-3">
                             <div class="row">
                                 <div class="multi-gd-img">
@@ -186,7 +186,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Beverages<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Портативная электроника<b class="caret"></b></a>
                         <ul class="dropdown-menu multi-column columns-3">
                             <div class="row">
                                 <div class="multi-gd-img">
@@ -204,9 +204,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                         </ul>
                     </li>
-                    <li><a href="#">Gourmet</a></li>
-                    <li><a href="#">Offers</a></li>
-                    <li><a href="#">Contact</a></li>
+
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
                 </ul>
             </div>
         </nav>
@@ -214,388 +214,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 
 <!-- //navigation -->
-<!-- main-slider -->
-<ul id="demo1">
-    <li>
-        <img src="{{ asset('bundles/myshopdefault/images/meizu-m1-note.jpg') }}" alt="" />
-        <!--Slider Description example-->
-        <div class="slide-desc">
-            <h3>Buy Products Now On Line With Us</h3>
-        </div>
-    </li>
-    <li>
-        <img src="{{ asset('bundles/myshopdefault/images/best_android_phone_2014.jpeg') }}" alt="" />
-        <div class="slide-desc">
-            <h3>Whole  Products Are Now On Line With Us</h3>
-        </div>
-    </li>
-
-    <li>
-        <img src="{{ asset('bundles/myshopdefault/images/best_android_phone_2014.jpeg') }}" alt="" />
-        <div class="slide-desc">
-            <h3>Whole  Products Are Now On Line With Us</h3>
-        </div>
-    </li>
-</ul>
-<!-- //main-slider -->
-{% block productList %}{% endblock %}
-<!-- //main-slider -->
-
-< <!-- Carousel
-    ================================================== -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <a href="#"> <img class="first-slide" src="{{ asset('bundles/myshopdefault/images/tv.jpg') }}" alt="First slide"></a>
-
-        </div>
-        <div class="item">
-            <a href="#"> <img class="second-slide " src="{{ asset('bundles/myshopdefault/images/k.png') }}" alt="Second slide"></a>
-
-        </div>
-        <div class="item">
-            <a href="#"><img class="third-slide " src="{{ asset('bundles/myshopdefault/images/q.png') }}" alt="Third slide"></a>
-
-        </div>
-    </div>
-
-</div><!-- /.carousel -->
-<!--banner-bottom-->
-<div class="ban-bottom-w3l">
-    <div class="container">
-        <div class="col-md-6 ban-bottom3">
-            <div class="ban-top">
-                <img src="{{ asset('bundles/myshopdefault/images/1.jpg') }}" class="img-responsive" alt=""/>
-
-            </div>
-            <div class="ban-img">
-                <div class=" ban-bottom1">
-                    <div class="ban-top">
-                        <img src="{{  asset('bundles/myshopdefault/images/2z.png') }}" class="img-responsive" alt=""/>
-
-                    </div>
-                </div>
-                <div class="ban-bottom2">
-                    <div class="ban-top">
-                        <img src="{{  asset('bundles/myshopdefault/images/w.JPG') }}" class="img-responsive" alt=""/>
-
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <div class="col-md-6 ban-bottom">
-            <div class="ban-top">
-                <img src="{{  asset('bundles/myshopdefault/images/qqqqq.jpg') }}" class="img-responsive" alt=""/>
 
 
-            </div>
-        </div>
 
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!--banner-bottom-->
-<!-- new -->
-<div class="newproducts-w3agile">
-    <div class="container">
-        <h3>New offers</h3>
-        <div class="agile_top_brands_grids">
-            <div class="col-md-3 top_brand_left-1">
-                <div class="hover14 column">
-                    <div class="agile_top_brand_left_grid">
-                        <div class="agile_top_brand_left_grid_pos">
-                            <img src="images/offer.png" alt=" " class="img-responsive">
-                        </div>
-                        <div class="agile_top_brand_left_grid1">
-                            <figure>
-                                <div class="snipcart-item block">
-                                    <div class="snipcart-thumb">
-                                        <a href="products.html"><img title=" " alt=" " src="images/14.png"></a>
-                                        <p>Fried-gram</p>
-                                        <div class="stars">
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star gray-star" aria-hidden="true"></i>
-                                        </div>
-                                        <h4>$35.99 <span>$55.00</span></h4>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart">
-                                                <input type="hidden" name="add" value="1">
-                                                <input type="hidden" name="business" value=" ">
-                                                <input type="hidden" name="item_name" value="Fortune Sunflower Oil">
-                                                <input type="hidden" name="amount" value="35.99">
-                                                <input type="hidden" name="discount_amount" value="1.00">
-                                                <input type="hidden" name="currency_code" value="USD">
-                                                <input type="hidden" name="return" value=" ">
-                                                <input type="hidden" name="cancel_return" value=" ">
-                                                <input type="submit" name="submit" value="Add to cart" class="button">
-                                            </fieldset>
-                                        </form>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 top_brand_left-1">
-                <div class="hover14 column">
-                    <div class="agile_top_brand_left_grid">
-                        <div class="agile_top_brand_left_grid_pos">
-                            <img src="images/offer.png" alt=" " class="img-responsive">
-                        </div>
-                        <div class="agile_top_brand_left_grid1">
-                            <figure>
-                                <div class="snipcart-item block">
-                                    <div class="snipcart-thumb">
-                                        <a href="products.html"><img title=" " alt=" " src="images/15.png"></a>
-                                        <p>Navaratan-dal</p>
-                                        <div class="stars">
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star gray-star" aria-hidden="true"></i>
-                                        </div>
-                                        <h4>$30.99 <span>$45.00</span></h4>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart">
-                                                <input type="hidden" name="add" value="1">
-                                                <input type="hidden" name="business" value=" ">
-                                                <input type="hidden" name="item_name" value="basmati rise">
-                                                <input type="hidden" name="amount" value="30.99">
-                                                <input type="hidden" name="discount_amount" value="1.00">
-                                                <input type="hidden" name="currency_code" value="USD">
-                                                <input type="hidden" name="return" value=" ">
-                                                <input type="hidden" name="cancel_return" value=" ">
-                                                <input type="submit" name="submit" value="Add to cart" class="button">
-                                            </fieldset>
-                                        </form>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 top_brand_left-1">
-                <div class="hover14 column">
-                    <div class="agile_top_brand_left_grid">
-                        <div class="agile_top_brand_left_grid_pos">
-                            <img src="images/offer.png" alt=" " class="img-responsive">
-                        </div>
-                        <div class="agile_top_brand_left_grid_pos">
-                            <img src="images/offer.png" alt=" " class="img-responsive">
-                        </div>
-                        <div class="agile_top_brand_left_grid1">
-                            <figure>
-                                <div class="snipcart-item block">
-                                    <div class="snipcart-thumb">
-                                        <a href="products.html"><img src="images/16.png" alt=" " class="img-responsive"></a>
-                                        <p>White-peasmatar</p>
-                                        <div class="stars">
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star gray-star" aria-hidden="true"></i>
-                                        </div>
-                                        <h4>$80.99 <span>$105.00</span></h4>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart">
-                                                <input type="hidden" name="add" value="1">
-                                                <input type="hidden" name="business" value=" ">
-                                                <input type="hidden" name="item_name" value="Pepsi soft drink">
-                                                <input type="hidden" name="amount" value="80.00">
-                                                <input type="hidden" name="discount_amount" value="1.00">
-                                                <input type="hidden" name="currency_code" value="USD">
-                                                <input type="hidden" name="return" value=" ">
-                                                <input type="hidden" name="cancel_return" value=" ">
-                                                <input type="submit" name="submit" value="Add to cart" class="button">
-                                            </fieldset>
-                                        </form>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 top_brand_left-1">
-                <div class="hover14 column">
-                    <div class="agile_top_brand_left_grid">
-                        <div class="agile_top_brand_left_grid_pos">
-                            <img src="images/offer.png" alt=" " class="img-responsive">
-                        </div>
-                        <div class="agile_top_brand_left_grid1">
-                            <figure>
-                                <div class="snipcart-item block">
-                                    <div class="snipcart-thumb">
-                                        <a href="products.html"><img title=" " alt=" " src="images/17.png"></a>
-                                        <p>Channa-dal</p>
-                                        <div class="stars">
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star gray-star" aria-hidden="true"></i>
-                                        </div>
-                                        <h4>$35.99 <span>$55.00</span></h4>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart">
-                                                <input type="hidden" name="add" value="1">
-                                                <input type="hidden" name="business" value=" ">
-                                                <input type="hidden" name="item_name" value="Fortune Sunflower Oil">
-                                                <input type="hidden" name="amount" value="35.99">
-                                                <input type="hidden" name="discount_amount" value="1.00">
-                                                <input type="hidden" name="currency_code" value="USD">
-                                                <input type="hidden" name="return" value=" ">
-                                                <input type="hidden" name="cancel_return" value=" ">
-                                                <input type="submit" name="submit" value="Add to cart" class="button">
-                                            </fieldset>
-                                        </form>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-    </div>
-</div>
-<!-- //new -->
-<!--brands-->
-<div class="brands">
-    <div class="container">
-        <h3>Brand Store</h3>
-        <div class="brands-agile">
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="brands-agile-1">
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="brands-agile-2">
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-            <div class="col-md-2 w3layouts-brand">
-                <div class="brands-w3l">
-                    <p><a href="#">Lorem</a></p>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<!--//brands-->
+{% block body %}{% endblock %}
 
 <!-- //footer -->
 <div class="footer">
@@ -668,23 +290,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 </div>
 <!-- //footer -->
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ asset('bundles/myshopdefault/js/bootstrap.min.js')}}"></script>
+
+<!-- top-header and slider -->
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+         var defaults = {
+         containerID: 'toTop', // fading element id
+         containerHoverID: 'toTopHover', // fading element hover id
+         scrollSpeed: 1200,
+         easingType: 'linear'
+         };
+         */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<!-- //here ends scrolling icon -->
+<script src="{{ asset('bundles/myshopdefault/js/minicart.min.js')}}"></script>
+<script>
+    // Mini Cart
+    paypal.minicart.render({
+        action: '#'
+    });
+
+    if (~window.location.search.indexOf('reset=true')) {
+        paypal.minicart.reset();
+    }
+</script>
 
 
 
-{% block body %}{% endblock %}
-
-                <!-- main slider-banner -->
-                <script src="{{ asset('bundles/myshopdefault/js/skdslider.min.js') }}"></script>
-                <link href="{{ asset('bundles/myshopdefault/css/skdslider.css') }}" rel="stylesheet">
-                <script type="text/javascript">
-                    jQuery(document).ready(function(){
-                        jQuery('#demo1').skdslider({'delay':5000, 'animationSpeed': 2000,'showNextPrev':true,'showPlayButton':true,'autoSlide':true,'animationType':'fading'});
-
-                        jQuery('#responsive').change(function(){
-                            $('#responsive_wrapper').width(jQuery(this).val());
-                        });
-
-                    });
-                </script>
-                <!-- //main slider-banner -->
 

@@ -54,6 +54,7 @@ class UploadImageService
         $smallFileName =$this->imageSiZeList->uploadSmallImg($photoDirPath, $photoFileName);
 
         $mediumFileName = $this->imageSiZeList->uploadMediumImg($photoDirPath, $photoFileName);
+        $iconFileName = $this->imageSiZeList->uploadIconImg($photoDirPath, $photoFileName);
        /* $image= new ImageResize($photoDirPath . $photoFileName);
         $image->resizeToHeight(200);
         $smallFileName= "small_". $photoFileName;
@@ -64,7 +65,7 @@ class UploadImageService
         $mediumFileName = "medium_" . $photoFileName;
         $image2->save($photoDirPath. $mediumFileName);*/
 
-    $result = new UploadedImageResult($smallFileName,$photoFileName, $mediumFileName);
+    $result = new UploadedImageResult($smallFileName,$photoFileName, $mediumFileName, $iconFileName);
 
     return $result;
 

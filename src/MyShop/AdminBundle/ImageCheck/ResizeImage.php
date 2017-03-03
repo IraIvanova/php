@@ -37,4 +37,15 @@ class ResizeImage
 
         return $mediumFileName;
     }
+
+    public  function uploadIconImg($photoDirPath, $photoFileName)
+    {
+        $image2 = new ImageResize($photoDirPath . $photoFileName);
+        $height= $this->imageSizeList[2][1];
+        $image2->resizeToHeight($height);
+        $iconFileName =  $photoFileName;
+        $image2->save($photoDirPath. $iconFileName);
+
+        return $iconFileName;
+    }
 }
