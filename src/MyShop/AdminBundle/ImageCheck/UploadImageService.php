@@ -23,14 +23,14 @@ class UploadImageService
     /**
      * @var ResizeImage
      */
-    private $imageSiZeList;
+    private $imageSizeList;
 
 
     public function __construct(CheckImg $checkImg, GenerateName $generateName, ResizeImage $imageSizeList )
     {
         $this->checkImg= $checkImg;
         $this->generateName = $generateName;
-        $this->imageSiZeList = $imageSizeList;
+        $this->imageSizeList = $imageSizeList;
     }
 
     public function setUploadImageRootDir($uploadImageRootDir)
@@ -51,21 +51,25 @@ class UploadImageService
 
         $uploadedFile->move($photoDirPath, $photoFileName);
 
-        $smallFileName =$this->imageSiZeList->uploadSmallImg($photoDirPath, $photoFileName);
+        $smallFileName =$this->imageSizeList->uploadSmallImg($photoDirPath, $photoFileName);
 
-        $mediumFileName = $this->imageSiZeList->uploadMediumImg($photoDirPath, $photoFileName);
-        $iconFileName = $this->imageSiZeList->uploadIconImg($photoDirPath, $photoFileName);
-       /* $image= new ImageResize($photoDirPath . $photoFileName);
-        $image->resizeToHeight(200);
-        $smallFileName= "small_". $photoFileName;
-        $image->save($photoDirPath. $smallFileName);
+        $mediumFileName = $this->imageSizeList->uploadMediumImg($photoDirPath, $photoFileName);
+        $iconFileName = $this->imageSizeList->uploadIconImg($photoDirPath, $photoFileName);
 
-        $image2 = new ImageResize($photoDirPath . $photoFileName);
-        $image2->resizeToHeight(400);
-        $mediumFileName = "medium_" . $photoFileName;
-        $image2->save($photoDirPath. $mediumFileName);*/
+        $mainPhotoFileName = $this->imageSizeList->uploadMainPhoto($photoDirPath, $photoFileName);
 
-    $result = new UploadedImageResult($smallFileName,$photoFileName, $mediumFileName, $iconFileName);
+
+        /* $image= new ImageResize($photoDirPath . $photoFileName);
+         $image->resizeToHeight(200);
+         $smallFileName= "small_". $photoFileName;
+         $image->save($photoDirPath. $smallFileName);
+
+         $image2 = new ImageResize($photoDirPath . $photoFileName);
+         $image2->resizeToHeight(400);
+         $mediumFileName = "medium_" . $photoFileName;
+         $image2->save($photoDirPath. $mediumFileName);*/
+
+    $result = new UploadedImageResult($smallFileName,$photoFileName, $mediumFileName, $iconFileName, $mainPhotoFileName );
 
     return $result;
 

@@ -129,7 +129,7 @@ my_shop_admin.category_list:
 my_shop_admin.tree:
     path:   /category/tree 
     defaults: { _controller: MyShopAdminBundle:Category:tree }
-        
+
 my_shop_admin.category_edit:
     path:   /category/{id}/edit
     defaults: { _controller: MyShopAdminBundle:Category:edit  }

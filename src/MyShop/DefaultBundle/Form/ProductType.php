@@ -38,6 +38,11 @@ class ProductType extends AbstractType
                 'label' => 'Иконка к товару',
                 'required' => false
             ])
+            ->add('mainPhotoFile', FileType::class, [
+                'mapped' => false,
+                'label' => 'главное фото к товару',
+                'required' => false
+            ])
 
 
             ;

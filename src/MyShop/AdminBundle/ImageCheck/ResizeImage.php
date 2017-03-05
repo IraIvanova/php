@@ -48,4 +48,15 @@ class ResizeImage
 
         return $iconFileName;
     }
+
+    public  function uploadMainPhoto($photoDirPath, $photoFileName)
+    {
+        $image2 = new ImageResize($photoDirPath . $photoFileName);
+        $height= $this->imageSizeList[0][0];
+        $image2->resizeToHeight($height);
+        $mainPhotoFileName = "main_". $photoFileName;
+        $image2->save($photoDirPath. $mainPhotoFileName);
+
+        return $mainPhotoFileName;
+    }
 }

@@ -84,6 +84,29 @@ class Product
      */
     private $iconFileName;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="main_photo_file_name", type="string", length=255, nullable=true)
+     */
+    private $mainPhotoFileName;
+
+    /**
+     * @return string
+     */
+    public function getMainPhotoFileName()
+    {
+        return $this->mainPhotoFileName;
+    }
+
+    /**
+     * @param string $mainPhotoFileName
+     */
+    public function setMainPhotoFileName($mainPhotoFileName)
+    {
+        $this->mainPhotoFileName = $mainPhotoFileName;
+    }
+
 
 
 

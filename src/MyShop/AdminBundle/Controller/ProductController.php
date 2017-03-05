@@ -57,14 +57,18 @@ $productId= $product->getId();
                 $product->setIconFileName($result->getIconFileName());
 
 
+                /** @var UploadedFile $mainPhotoFile */
+                $mainPhotoFile = $filesAr["mainPhotoFile"];
+
+                $result = $this->get("myshop_admin.image_uploader")->uploadImage($mainPhotoFile, $productId);
+
+                $product->setMainPhotoFileName($result->getMainPhotoFileName());
+
                 $manager = $this->getDoctrine()->getManager();
                 $manager->persist($product);
                 $manager->flush();
 
              //  $mailSender= $this->get("myshop_admin.mail_sender");
-
-
-
               //  $mailSender->sendMail("avonavis@gmail.com", "igorphphillel@gmail.com","product added!");
 
                 /*$message = new \Swift_Message();
@@ -88,11 +92,6 @@ $productId= $product->getId();
 
                 $this->addFlash("success",'Product added!');
 
-              /*  $logger=$this->get("logger");
-                $logger->addInfo(json_encode([
-                "product id"=> $product->getId(),
-                "price"=> $product->getPrice(
-]));*/
 
                 return $this->redirectToRoute("my_shop_admin.product_list");
             }

@@ -2641,6 +2641,10 @@ ul.phone_email li {
 .checkout-left-basket {
     width: 34%;
 }
+.small_img{
+    width:10%;
+margin-top:5%;
+}
 .agileinfo_single_left {
     float: left;
     width: 40%;

@@ -5,12 +5,13 @@
     <div class="products">
         <div class="container">
             <div class="agileinfo_single">
-
                 <div class="col-md-4 agileinfo_single_left">
-                    {% for photos in photo %}
-                        <a href="/photos/{{ photos.getFileName() }}"> <img id="example" src="/photos/{{ photos.getMediumFileName() }}" alt=" " class="img-responsive"></a>
-{% endfor %}
-                        </div>
+
+                    {% for products in product %}
+                        <img id="example" src="/photos/{{ products.getMainPhotoFileName() }}" alt=" photo" class="img-responsive">
+                    {% endfor %}
+                </div>
+
                 <div class="col-md-8 agileinfo_single_right">
                     <h2>{{ product.getModel() }}</h2>
                     <div class="rating1">

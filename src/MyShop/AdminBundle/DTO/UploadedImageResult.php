@@ -8,14 +8,26 @@ private $smallFilename;
 private $mediumFileName;
 
 private $bigFileName;
+private $mainPhotoFileName;
 
-public function __construct($smallFilename, $mediumFileName, $bigFileName, $iconFileName)
+
+public function __construct($smallFilename, $mediumFileName, $bigFileName, $iconFileName, $mainPhotoFileName)
 {
     $this->smallFilename = $smallFilename;
     $this->mediumFileName = $mediumFileName;
     $this->bigFileName = $bigFileName;
     $this->iconFileName = $iconFileName;
+    $this->mainPhotoFileName = $mainPhotoFileName;
+
 }
+
+    /**
+     * @return mixed
+     */
+    public function getMainPhotoFileName()
+    {
+        return $this->mainPhotoFileName;
+    }
 
     /**
      * @return mixed

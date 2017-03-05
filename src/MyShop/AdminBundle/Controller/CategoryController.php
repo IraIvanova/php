@@ -100,7 +100,7 @@ return  $listData;
 public function editAction(Request $request,$id)
 {
     $category= $this->getDoctrine()->getRepository("MyShopDefaultBundle:Category")->find($id);
-
+$idParent = $category->getParentCategory()->getId();
 $form = $this->createForm(CategoryType::class, $category);
 
         if ($request->isMethod("POST"))
@@ -108,12 +108,16 @@ $form = $this->createForm(CategoryType::class, $category);
             $form->handleRequest($request);
 
             $manager = $this->getDoctrine()->getManager();
-            
-            return $this->redirectToRoute("my_shop_admin.category_edit");
+            $manager->persist($category);
+            $manager->flush();
+
+            return $this->redirectToRoute("my_shop_admin.category_list", ["idParentCategory"=> $idParent]);
         }
 
         return ["form" => $form->createView(),
             "category" => $category];
+
+
 }
 
 public function deleteAction(Request $request,$id)
