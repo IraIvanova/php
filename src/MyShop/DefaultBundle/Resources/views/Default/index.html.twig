@@ -44,7 +44,7 @@
                                 <p class="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
                             </div>
 
-                            {% for product in productList %}
+                            {% for product in productList | slice (-6) %}
                                 <div class="agile_top_brands_grids">
                                     <div class="col-md-4 top_brand_left">
                                         <div class="hover14 column">

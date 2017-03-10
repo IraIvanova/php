@@ -31,8 +31,16 @@ class ProductType extends AbstractType
             ->add('category', EntityType::class, [
                 "class" => "MyShopDefaultBundle:Category",
                 "choice_label" => "name",
-                "label" => "Категория"
-            ])
+                "label" => "Категория",
+                'group_by' => function($idParentCategory ,$key, $index)
+                {
+
+                if ($idParentCategory = null) {
+                    return '$parentCategory->getName()';
+                } else {
+                    return '$childrenCategories->getName()';
+                }
+                } ])
             ->add('iconFile', FileType::class, [
                 'mapped' => false,
                 'label' => 'Иконка к товару',
@@ -43,7 +51,6 @@ class ProductType extends AbstractType
                 'label' => 'главное фото к товару',
                 'required' => false
             ])
-
 
             ;
     }

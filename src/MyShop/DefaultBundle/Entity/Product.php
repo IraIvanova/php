@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="product")
  * @ORM\Entity(repositoryClass="MyShop\DefaultBundle\Repository\ProductRepository")
  */
-class Product
+class Product implements \JsonSerializable
 {
     /**
      * @var int
@@ -84,12 +84,31 @@ class Product
      */
     private $iconFileName;
 
+
     /**
      * @var string
      *
      * @ORM\Column(name="main_photo_file_name", type="string", length=255, nullable=true)
      */
     private $mainPhotoFileName;
+
+
+    public function jsonSerialize()
+    {
+        return[
+            "id" =>$this->getId(),
+            "model" => $this->getModel(),
+            "price" => $this->getPrice()
+        ];
+    }
+
+    public function __construct()
+    {
+        $date = new \DateTime("now");
+        $this->setDateCreatedAt($date);
+
+        $this->photos = new ArrayCollection();
+    }
 
     /**
      * @return string
@@ -106,18 +125,6 @@ class Product
     {
         $this->mainPhotoFileName = $mainPhotoFileName;
     }
-
-
-
-
-    public function __construct()
-    {
-        $date = new \DateTime("now");
-        $this->setDateCreatedAt($date);
-
-        $this->photos = new ArrayCollection();
-    }
-
 
     /**
      * @return Category

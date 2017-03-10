@@ -1,15 +1,26 @@
 {% extends "@MyShopDefault/layout.html.twig" %}
 
 {% block body %}
-
+    <!-- breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+                <li><a href="{{ path("myshop.product_list")}}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+                <li class="active">Household</li>
+            </ol>
+        </div>
+    </div>
+    <!-- //breadcrumbs -->
     <div class="products">
         <div class="container">
+
             <div class="agileinfo_single">
+
                 <div class="col-md-4 agileinfo_single_left">
 
-                    {% for products in product %}
-                        <img id="example" src="/photos/{{ products.getMainPhotoFileName() }}" alt=" photo" class="img-responsive">
-                    {% endfor %}
+
+                        <img id="example" src="/photos/{{ product.getMainPhotoFileName() }}" alt=" photo" class="img-responsive">
+
                 </div>
 
                 <div class="col-md-8 agileinfo_single_right">

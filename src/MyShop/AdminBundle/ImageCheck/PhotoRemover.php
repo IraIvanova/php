@@ -4,10 +4,11 @@
 namespace MyShop\AdminBundle\ImageCheck;
 
 
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Doctrine\ORM\EntityManager;
-use MyShop\DefaultBundle\Form\ProductPhotoType;
 
-class PhotoRemover
+
+class PhotoRemover extends Controller
 {
    private $manager;
 
@@ -18,23 +19,16 @@ class PhotoRemover
        $this->pathDir = $pathDir;
    }
 
-    public function removePhoto($pathDir, $photoFileName)
+    public function removePhoto($photo)
     {
+        $filename = $this->pathDir . $photo->getFileName();
+        $smallFilename = $this->pathDir . $photo->getSmallFileName();
+        $mediumFilename = $this->pathDir . $photo->getMediumFileName();
+        unlink($filename);
+        unlink($smallFilename);
+        unlink($mediumFilename);
 
-        $photoFile= $pathDir . $photoFileName;
-        $smallFileName= "small_". $photoFileName;
-        $mediumFileName = "medium_". $photoFileName;
-        $smallPhotoFile= $pathDir . $smallFileName;
-        $mediumPhotoFile = $pathDir . $mediumFileName;
-
-        unlink($photoFile);
-
-        unlink($smallPhotoFile);
-
-        unlink($mediumPhotoFile);
-
-
-
-
+        $this->manager->remove($photo);
+        $this->manager->flush();
     }
 }

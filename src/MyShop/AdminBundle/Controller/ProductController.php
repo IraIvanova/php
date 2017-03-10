@@ -29,47 +29,41 @@ class ProductController extends Controller
             $form->handleRequest($request);
 
 
-
             //$result = $this->get("myshop_admin.image_uploader")->uploadImage($photoFile, $idProduct);
 
             if ($form->isSubmitted()) {
 
                 /** @var ConstraintViolationList */
                 $errorList = $this->get("validator")->validate($product);
-                if($errorList->count() > 0)
-                {
-                    foreach ($errorList as $error)
-                    {
+                if ($errorList->count() > 0) {
+                    foreach ($errorList as $error) {
                         $this->addFlash('error', $error->getMessage());
                     }
                     return $this->redirectToRoute("my_shop_admin.product_add");
                 }
-$productId= $product->getId();
+                $productId = $product->getId();
                 $filesAr = $request->files->get("myshop_defaultbundle_product");
 
                 /** @var UploadedFile $iconFile */
 
                 $iconFile = $filesAr["iconFile"];
 
-                $result = $this->get("myshop_admin.image_uploader")->uploadImage($iconFile, $productId);
+                $iconFileName = $this->get("myshop_admin.image_uploader")->uploadIcon($iconFile);
 
 
-                $product->setIconFileName($result->getIconFileName());
-
-
-                /** @var UploadedFile $mainPhotoFile */
                 $mainPhotoFile = $filesAr["mainPhotoFile"];
+                $mainPhotoFileName = $this->get("myshop_admin.image_uploader")->uploadMainPhoto($mainPhotoFile);
 
-                $result = $this->get("myshop_admin.image_uploader")->uploadImage($mainPhotoFile, $productId);
+                $product->setIconFileName($iconFileName);
+                $product->setMainPhotoFileName($mainPhotoFileName);
 
-                $product->setMainPhotoFileName($result->getMainPhotoFileName());
 
                 $manager = $this->getDoctrine()->getManager();
                 $manager->persist($product);
                 $manager->flush();
 
-             //  $mailSender= $this->get("myshop_admin.mail_sender");
-              //  $mailSender->sendMail("avonavis@gmail.com", "igorphphillel@gmail.com","product added!");
+                //  $mailSender= $this->get("myshop_admin.mail_sender");
+                //  $mailSender->sendMail("avonavis@gmail.com", "igorphphillel@gmail.com","product added!");
 
                 /*$message = new \Swift_Message();
                 $message->setTo("avonavis@gmail.com");
@@ -87,10 +81,10 @@ $productId= $product->getId();
                 $mailer->send($message);*/
 
 
-                $session= $this->get('session');
-                 $session->set('notification', $this->get('session')->get('notification') . "product added. ");
+                $session = $this->get('session');
+                $session->set('notification', $this->get('session')->get('notification') . "product added. ");
 
-                $this->addFlash("success",'Product added!');
+                $this->addFlash("success", 'Product added!');
 
 
                 return $this->redirectToRoute("my_shop_admin.product_list");
@@ -107,18 +101,12 @@ $productId= $product->getId();
     {
         $manager = $this->getDoctrine()->getManager();
         $product = $this->getDoctrine()->getRepository("MyShopDefaultBundle:Product")->find($id);
-       /*$photos=$product->getPhotos();
-        $photoRemover= $this->get("myshop_admin.photo_remover");
+        $photos = $product->getPhotos();
+       $photoRemover = $this->get("myshop_admin.photo_remover");
 
-        foreach( $photos as $photo)
-        {
-            $photoFileName= $photo->getFileName();
-            $pathPhoto=$photo->getRootDir();
-            $photoRemover->removePhoto($pathPhoto, $photoFileName);
-
-        }/*/
-
-
+        foreach ($photos as $photo) {
+            $photoRemover->removePhoto($photo);
+        }
         $manager->remove($product);
         $manager->flush();
 
@@ -131,58 +119,62 @@ $productId= $product->getId();
     /**
      * @Template()
      */
-    public function editAction(Request $request, $id)
-    {
-        $product = $this->getDoctrine()->getRepository("MyShopDefaultBundle:Product")->find($id);
 
-        $form = $this->createForm(ProductType::class, $product);
+        public function editAction(Request $request, $id)
+        {
+            $product = $this->getDoctrine()->getRepository("MyShopDefaultBundle:Product")->find($id);
 
-
-        if ($request->isMethod("POST")) {
-            $form->handleRequest($request);
-
-            if ($form->isSubmitted()) {
-                $manager = $this->getDoctrine()->getManager();
-                $manager->persist($product);
-                $manager->flush();
+            $form = $this->createForm(ProductType::class, $product);
 
 
-                $session= $this->get('session');
-                $session->set('notification', $this->get('session')->get('notification') . "product edit.");
-                return $this->redirectToRoute("my_shop_admin.product_list");
+            if ($request->isMethod("POST")) {
+                $form->handleRequest($request);
+
+                if ($form->isSubmitted()) {
+                    $manager = $this->getDoctrine()->getManager();
+                    $manager->persist($product);
+                    $manager->flush();
+
+
+                    $session = $this->get('session');
+                    $session->set('notification', $this->get('session')->get('notification') . "product edit.");
+                    return $this->redirectToRoute("my_shop_admin.product_list");
+                }
             }
+
+            return [
+                "form" => $form->createView(),
+                "product" => $product
+            ];
         }
 
-        return [
-            "form" => $form->createView(),
-            "product" => $product
-        ];
-    }
 
-    public function listByCategoryAction($id_category)
-    {
-        $category = $this->getDoctrine()->getRepository("MyShopDefaultBundle:Category")->find($id_category);
-        $productList = $category->getProductList();
+        public function listByCategoryAction($id_category)
+        {
+            $category = $this->getDoctrine()->getRepository("MyShopDefaultBundle:Category")->find($id_category);
+            $productList = $category->getProductList();
 
-        return $this->render("@MyShopAdmin/Product/list.html.twig", [
-            "productList" => $productList
-        ]);
-    }
+            return $this->render("@MyShopAdmin/Product/list.html.twig", [
+                "productList" => $productList
+            ]);
+        }
 
 
-    /**
-     * @Template()
-     */
-    public function listAction()
-    {
-        $productList = $this->getDoctrine()
-            ->getManager()
-            ->createQuery("select p, c from MyShopDefaultBundle:Product p join p.category c")
-            ->getResult();
-$session= $this->get('session');
-                 $session->set( 'history',  $this->get('session')->get('history').'product update ');
-        return ["productList" => $productList];
-    }
+        /**
+         * @Template()
+         */
+
+       public function listAction()
+        {
+            $productList = $this->getDoctrine()
+                ->getManager()
+                ->createQuery("select p, c from MyShopDefaultBundle:Product p join p.category c")
+                ->getResult();
+            $session = $this->get('session');
+            $session->set('history', $this->get('session')->get('history') . 'product update ');
+            return ["productList" => $productList];
+        }
+
 
 
 }

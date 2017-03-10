@@ -13,6 +13,7 @@ class JsonRPCController extends Controller
     {
         $requestJson = $request->getContent();
         $requestAr = @json_decode($requestJson, true);
+
         if ($requestAr === null) {
             return new JsonResponse([
                 'jsonrpc' => '2.0',
@@ -45,8 +46,34 @@ class JsonRPCController extends Controller
                     $result[] = $responseAr;
                 }
                 return new JsonResponse($result);
+
             }
-        }
+        } /*$data = json_decode($requestJson, true);
+
+
+           if( $data["method"] == "show_product") {
+               $idProduct = $data["params"]["idProduct"];
+               $product = $this->getDoctrine()->getRepository("MyShopDefaultBundle:Product")->find($idProduct);
+
+               $responseAr = [
+                   "id" => $product->getId(),
+                   "model" => $product->getModel(),
+                   "price" => $product->getPrice()
+               ];
+
+               $fullResponse = [
+                   "jsonrpc" => "2.0",
+                   "result" => $responseAr,
+                   "id" => $data["id"]
+               ];
+              // $responseJson = json_encode($fullResponse);
+               //$response= new Response($responseJson);
+              // return $response;
+
+               return new JsonResponse($fullResponse);
+
+           }
+           */
     }
     public function categoryDetails($params)
     {
@@ -60,17 +87,15 @@ class JsonRPCController extends Controller
     {
         $productId = $params['productId'];
         $product = $this->getDoctrine()->getRepository('MyShopDefaultBundle:Product')->find($productId);
-        return [
-            'id' => $product->getId(),
-            'model' => $product->getModel(),
-            'description' => $product->getDescription(),
-            'price' => $product->getPrice(),
-            'date' => $product->getDateCreatedAt()->format('d.m.Y')
-        ];
+        $json= json_encode($product);
+
+        return $json;
+
     }
 
 
-    public function allProducts($params)
+
+    public function allProducts()
     {
         $products = $this->getDoctrine()->getRepository('MyShopDefaultBundle:Product')->findAll();
         $prodArray = [];
@@ -81,7 +106,7 @@ class JsonRPCController extends Controller
          'price' => $product->getPrice(),
          'description' => $product->getDescription(),
          'date' => $product->getDateCreatedAt()->format('d.m.Y'),
-          'icon' => '/../web/photos/'. $product->getIconFileName()
+          'icon' => '/../photos/'. $product->getIconFileName()
                 ];
         }
         return $prodArray;

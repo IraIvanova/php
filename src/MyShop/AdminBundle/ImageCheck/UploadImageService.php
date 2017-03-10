@@ -54,9 +54,7 @@ class UploadImageService
         $smallFileName =$this->imageSizeList->uploadSmallImg($photoDirPath, $photoFileName);
 
         $mediumFileName = $this->imageSizeList->uploadMediumImg($photoDirPath, $photoFileName);
-        $iconFileName = $this->imageSizeList->uploadIconImg($photoDirPath, $photoFileName);
 
-        $mainPhotoFileName = $this->imageSizeList->uploadMainPhoto($photoDirPath, $photoFileName);
 
 
         /* $image= new ImageResize($photoDirPath . $photoFileName);
@@ -69,9 +67,58 @@ class UploadImageService
          $mediumFileName = "medium_" . $photoFileName;
          $image2->save($photoDirPath. $mediumFileName);*/
 
-    $result = new UploadedImageResult($smallFileName,$photoFileName, $mediumFileName, $iconFileName, $mainPhotoFileName );
+    $result = new UploadedImageResult($smallFileName,$photoFileName, $mediumFileName );
 
     return $result;
 
+    }
+
+    public function uploadIcon(UploadedFile $uploadedFile,  $iconFileName = null)
+    {
+        $imageNameGenerator = $this->generateName;
+        $checkImg = $this->checkImg;
+        if ($iconFileName == null) {
+            $iconFileName = "icon_" . $imageNameGenerator->genName() . "." . $uploadedFile->getClientOriginalExtension();
+        }
+        $iconDirPath = $this->uploadImageRootDir . "../" . "photos/";
+        try {
+            $checkImg->check($uploadedFile);
+        } catch (\InvalidArgumentException $ex) {
+            die("Image type error!");
+        }
+        try {
+            $uploadedFile->move($iconDirPath, $iconFileName);
+        } catch (\Exception $exception) {
+            echo "Can not move file!";
+            throw $exception;
+        }
+        $img = new ImageResize($iconDirPath . $iconFileName);
+        $img->resizeToBestFit(120, 120);
+        $img->save($iconDirPath . $iconFileName);
+        return $iconFileName;
+    }
+    public function uploadMainPhoto(UploadedFile $uploadedFile)
+    {
+        $imageNameGenerator = $this->generateName;
+        $checkImg = $this->checkImg;
+
+            $mainPhotoFileName  = "mainphoto_" . $imageNameGenerator->genName() . "." . $uploadedFile->getClientOriginalExtension();
+
+        $photoDirPath = $this->uploadImageRootDir;
+        try {
+            $checkImg->check($uploadedFile);
+        } catch (\InvalidArgumentException $ex) {
+            die("Image type error!");
+        }
+        try {
+            $uploadedFile->move($photoDirPath, $mainPhotoFileName );
+        } catch (\Exception $exception) {
+            echo "Can not move file!";
+            throw $exception;
+        }
+        $img = new ImageResize($photoDirPath . $mainPhotoFileName );
+        $img->resizeToBestFit(400, 400);
+        $img->save($photoDirPath . $mainPhotoFileName );
+        return $mainPhotoFileName ;
     }
 }

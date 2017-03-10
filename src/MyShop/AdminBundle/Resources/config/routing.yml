@@ -171,3 +171,15 @@ my_shop_admin.user_delete:
 my_shop_admin.user_list:
     path:   /user/list
     defaults: { _controller: MyShopAdminBundle:User:userList }
+
+my_shop_admin.demo_user_load:
+    path:   /load/user
+    defaults: { _controller: MyShopAdminBundle:Default:loadUser }
+
+my_shop_admin.demo_product_load:
+    path:   /load/product
+    defaults: { _controller: MyShopAdminBundle:Default:loadProduct }
+
+my_shop_admin.demo_category_load:
+    path:   /load/category
+    defaults: { _controller: MyShopAdminBundle:Default:loadCategory }

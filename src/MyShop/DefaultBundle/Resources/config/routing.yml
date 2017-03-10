@@ -42,3 +42,9 @@ myshop.api.json_rpc:
 myshop.index_page:
     path: /
     defaults: { _controller: MyShopDefaultBundle:Default:index }
+
+myshop.curl_client_json:
+    path: /client/jsonrpc/{idProduct}
+    defaults: { _controller: MyShopDefaultBundle:Default:clientCurl}
+    requirements:
+        idProduct: \d+

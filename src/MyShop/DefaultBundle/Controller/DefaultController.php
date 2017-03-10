@@ -2,6 +2,7 @@
 
 namespace MyShop\DefaultBundle\Controller;
 
+use GuzzleHttp\Client;
 use MyShop\DefaultBundle\Entity\Product;
 use MyShop\DefaultBundle\Form\ProductType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -9,6 +10,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Doctrine\ORM\Tools\Pagination\Paginator;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class DefaultController extends Controller
 {
@@ -19,8 +22,8 @@ class DefaultController extends Controller
     {
         $doctrine = $this->getDoctrine();
         $manager = $doctrine->getManager();
-
         $repository = $manager->getRepository("MyShopDefaultBundle:Product");
+        //$productList= $this->getDoctrine()->getManager()->createQuery("select p from MyShopDefaultBundle:Product p limit 6 ")->getResult();
 
         $productList = $repository->findAll();
 
@@ -53,7 +56,7 @@ class DefaultController extends Controller
 
     /**
      * @Template()
-    */
+     */
     public function showProductAction(Request $request, $id)
     {
         $doctrine = $this->getDoctrine();
@@ -62,21 +65,21 @@ class DefaultController extends Controller
         $repository = $manager->getRepository("MyShopDefaultBundle:Product");
         $product = $repository->find($id);
 
-        $photo= $product->getPhotos();
+        if($product == null)
+            throw new NotFoundHttpException();
 
-
-
+        $photo = $product->getPhotos();
 
 
         return [
             "product" => $product,
-                "photo"=> $photo
+            "photo" => $photo
         ];
     }
 
     /**
      * @Template()
-    */
+     */
     public function showProductListAction()
     {
         $doctrine = $this->getDoctrine();
@@ -106,9 +109,6 @@ class DefaultController extends Controller
         $news = $repository->find($id);
 
 
-
-
-
         return [
             "news" => $news
         ];
@@ -121,7 +121,7 @@ class DefaultController extends Controller
     {
         $manager = $this->getDoctrine()->getManager();
 
-        $newsList= $manager->getRepository("MyShopDefaultBundle:News")->findAll();
+        $newsList = $manager->getRepository("MyShopDefaultBundle:News")->findAll();
 
 
         return [
@@ -130,8 +130,23 @@ class DefaultController extends Controller
         ];
     }
 
+    public function clientCurlAction($idProduct)
+    {
+        $client = $this->get("curl_client");
+        $request = [
+            'jsonrpc' => '2.0',
+            'method' => 'productDetails',
+            'params' => ['productId' => $idProduct],
+            'id' => rand()
+        ];
+        $newRequest = json_encode($request);
+        $response = $client->send( $newRequest );
 
+        return new Response($response);
+    }
 }
-
-
+//     $client = new Client();
+//     $response = $client->request("POST", "http://127.0.0.1:8000/api/jsonrpc");
+//     var_dump($response);
+//     die();
 

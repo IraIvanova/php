@@ -13,7 +13,7 @@ class DefaultController extends Controller
     */
     public function indexAction()
     {
-        $viewData = " ";
+     /*   $viewData = " ";
         $session = $this->get('session');
         if ($session->has("notification"))
         {
@@ -43,9 +43,31 @@ class DefaultController extends Controller
 
 
 
- return ["newArr"=> $newArr];
+ return ["newArr"=> $newArr];*/
 }
 
+public function loadUserAction()
+{
+    $this->get("load_predata")->loadUsers();
+    $this->addFlash("success", "Demo user is added!");
 
+    return $this->redirectToRoute("my_shop_admin.index");
+}
+
+    public function loadProductAction()
+    {
+        $this->get("load_predata")->loadProduct();
+        $this->addFlash("success", "Demo product is added!");
+
+        return $this->redirectToRoute("my_shop_admin.index");
+    }
+
+    public function loadCategoryAction()
+    {
+        $this->get("load_predata")->loadCategory();
+        $this->addFlash("success", "Demo category is added!");
+
+        return $this->redirectToRoute("my_shop_admin.index");
+    }
 
 }

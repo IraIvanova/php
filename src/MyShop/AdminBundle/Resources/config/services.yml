@@ -34,7 +34,10 @@ services:
            - "@mailer"
 
     myshop_admin.photo_remover:
-         class: MyShop\AdminBundle\ImageCheck\PhotoRemover
+         class:  MyShop\AdminBundle\ImageCheck\PhotoRemover
+         arguments:
+            - "@doctrine.orm.default_entity_manager"
+            - "%image_upload_dir%"
         
 
  

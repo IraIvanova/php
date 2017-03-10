@@ -18,6 +18,8 @@ parameters:
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
     image_upload_dir: "%kernel.root_dir%/../web/photos/"
+    json_rpc_server_host: "http://127.0.0.1/api/jsonrpc"
+
     upload_image_type_list:
         - ["jpg", "image/jpg"]
         - ["jpeg", "image/jpeg"]
