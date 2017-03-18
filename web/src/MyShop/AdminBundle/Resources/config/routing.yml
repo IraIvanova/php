@@ -1,0 +1,185 @@
+my_shop_admin.index:
+    path:   /
+    defaults: { _controller: MyShopAdminBundle:Default:index }
+
+my_shop_admin.product_add:
+    path:   /product/add
+    defaults: { _controller: MyShopAdminBundle:Product:add }
+
+my_shop_admin.product_list:
+    path:   /product/list
+    defaults: { _controller: MyShopAdminBundle:Product:list }
+
+my_shop_admin.product_list_by_category:
+    path:   /category/{id_category}/product/list
+    defaults: { _controller: MyShopAdminBundle:Product:listByCategory }
+    requirements:
+        id_category: \d+
+
+my_shop_admin.product_delete:
+    path:   /product/{id}/delete
+    defaults: { _controller: MyShopAdminBundle:Product:delete }
+    requirements:
+        id: \d+
+
+my_shop_admin.product_edit:
+    path:   /product/{id}/edit
+    defaults: { _controller: MyShopAdminBundle:Product:edit }
+    requirements:
+        id: \d+
+
+my_shop_admin.category_add:
+    path:   /category/add/{idParent}
+    defaults: { _controller: MyShopAdminBundle:Category:add, idParent:null }
+
+my_shop_admin.news_add:
+    path:   /news/add
+    defaults: { _controller: MyShopAdminBundle:News:addNews }
+
+my_shop_admin.news_edit:
+    path:   /news/{id}/edit
+    defaults: { _controller: MyShopAdminBundle:News:editNews }
+    requirements:
+            id: \d+
+
+my_shop_admin.news_delete:
+    path:   /news/{id}/delete
+    defaults: { _controller: MyShopAdminBundle:News:deleteNews }
+    requirements:
+            id: \d+
+
+my_shop_admin.news_category_add:
+    path:   /news/category/add
+    defaults: { _controller: MyShopAdminBundle:NewsCategory:addNewsCategory }
+
+my_shop_admin.news_category_edit:
+    path:   /news/category/{id}/edit
+    defaults: { _controller: MyShopAdminBundle:NewsCategory:editNewsCategory }
+    requirements:
+            id: \d+
+
+my_shop_admin.news_category_delete:
+    path:   /news/category/{id}/delete
+    defaults: { _controller: MyShopAdminBundle:NewsCategory:deleteNewsCategory }
+    requirements:
+            id: \d+
+
+my_shop_admin.news_category_list:
+    path:   /news/category/list
+    defaults: { _controller: MyShopAdminBundle:NewsCategory:newsList }
+
+my_shop_admin.news_photo_add:
+    path:   /news/{idNews}/photo/add
+    defaults: { _controller: MyShopAdminBundle:NewsPhoto:add }
+
+my_shop_admin.news_photo_list:
+    path:   /news/{idNews}/photos/list
+    defaults: { _controller: MyShopAdminBundle:NewsPhoto:list }
+    requirements:
+            id: \d+
+
+my_shop_admin.news_photo_edit:
+    path:   /news/{idNews}/photo/edit
+    defaults: { _controller: MyShopAdminBundle:NewsPhoto:edit }
+
+my_shop_admin.news_photo_delete:
+    path:   /news/{id}/photo/delete
+    defaults: { _controller: MyShopAdminBundle:NewsPhoto:delete }
+    requirements:
+                id: \d+
+
+my_shop_admin.news_list:
+    path:   /news/list
+    defaults: { _controller: MyShopAdminBundle:News:list }
+
+my_shop_admin.product_photo_add:
+    path:   /product/{idProduct}/photo/add
+    defaults: { _controller: MyShopAdminBundle:ProductPhoto:add }
+    requirements:
+        idProduct: \d+
+
+my_shop_admin.product_photo_list:
+    path:   /product/{idProduct}/photos
+    defaults: { _controller: MyShopAdminBundle:ProductPhoto:list }
+    requirements:
+        idProduct: \d+
+
+my_shop_admin.product_photo_edit:
+    path:   /product/{id}/photo/edit
+    defaults: { _controller: MyShopAdminBundle:ProductPhoto:edit }
+    requirements:
+          id: \d+
+
+my_shop_admin.product_photo_delete:
+    path:   /product/{id}/photo/delete
+    defaults: { _controller: MyShopAdminBundle:ProductPhoto:delete }
+    requirements:
+                id: \d+
+
+my_shop_admin.product_icon_add:
+    path:   /product/{idProduct}/icon/add
+    defaults: { _controller: MyShopAdminBundle:Product:createIcon }
+    requirements:
+        idProduct: \d+
+
+my_shop_admin.category_list:
+    path:   /category/list/{idParentCategory}
+    defaults: { _controller: MyShopAdminBundle:Category:list, idParentCategory:null }
+
+my_shop_admin.tree:
+    path:   /category/tree 
+    defaults: { _controller: MyShopAdminBundle:Category:tree }
+
+my_shop_admin.category_edit:
+    path:   /category/{id}/edit
+    defaults: { _controller: MyShopAdminBundle:Category:edit  }
+    requirements:
+            id: \d+
+
+my_shop_admin.category_delete:
+    path:   /category/{id}/delete
+    defaults: { _controller: MyShopAdminBundle:Category:delete }
+    requirements:
+            id: \d+
+
+login:
+    path:   /login
+    defaults: { _controller: MyShopAdminBundle:Login:login }
+
+my_shop_admin.sendmail:
+    path:   /product/photo/{id}/sendmail
+    defaults: { _controller: MyShopAdminBundle:ProductPhoto:sendMail }
+    requirements:
+            id: \d+
+
+my_shop_admin.user_add:
+    path:   /user/add
+    defaults: { _controller: MyShopAdminBundle:User:add }
+
+my_shop_admin.user_edit:
+    path:   /user/{id}/edit
+    defaults: { _controller: MyShopAdminBundle:User:edit }
+    requirements:
+            id: \d+
+
+my_shop_admin.user_delete:
+    path:   /user/{id}/delete
+    defaults: { _controller: MyShopAdminBundle:User:delete }
+    requirements:
+            id: \d+
+
+my_shop_admin.user_list:
+    path:   /user/list
+    defaults: { _controller: MyShopAdminBundle:User:userList }
+
+my_shop_admin.demo_user_load:
+    path:   /load/user
+    defaults: { _controller: MyShopAdminBundle:Default:loadUser }
+
+my_shop_admin.demo_product_load:
+    path:   /load/product
+    defaults: { _controller: MyShopAdminBundle:Default:loadProduct }
+
+my_shop_admin.demo_category_load:
+    path:   /load/category
+    defaults: { _controller: MyShopAdminBundle:Default:loadCategory }

@@ -1,0 +1,8 @@
+{% extends "@MyShopAdmin/layout.html.twig" %}
+
+{% block body %}
+    <form method="post" enctype="multipart/form-data" action="{{ path('my_shop_admin.product_icon_add', { idProduct:product.id}) }}">
+        {{ form_widget(form) }}
+        <input type="submit" />
+    </form>
+{% endblock %}

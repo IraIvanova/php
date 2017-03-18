@@ -38,6 +38,11 @@ services:
          arguments:
             - "@doctrine.orm.default_entity_manager"
             - "%image_upload_dir%"
+
+    myshop_admin.product_import_export:
+          class:   MyShop\AdminBundle\Utils\ProductImportExport
+          arguments:
+             - "@doctrine.orm.entity_manager"
         
 
  

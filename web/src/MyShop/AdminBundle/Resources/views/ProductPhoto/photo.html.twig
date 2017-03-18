@@ -1,0 +1,23 @@
+{% extends "@MyShopDefault/layout.html.twig" %}
+
+{% block body %}
+
+
+
+
+        {% for photo in product.getPhotos() %}
+            <tr>
+                <td>{{ photo.getTitle() }}</td>
+                <td>
+                    <img src="/photos/{{ photo.getFileName() }}" />
+                </td>
+                <td>
+                    <a href="{{ path("my_shop_admin.product_photo_edit", {idProduct:photo.id}) }}">Редактирование</a>
+                    <a href="{{ path("my_shop_admin.product_photo_delete", {id:photo.id} ) }}">Удалить</a>
+                </td>
+            </tr>
+
+        {% endfor %}
+    </table>
+{% endblock %}
+

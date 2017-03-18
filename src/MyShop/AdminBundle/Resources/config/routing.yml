@@ -183,3 +183,11 @@ my_shop_admin.demo_product_load:
 my_shop_admin.demo_category_load:
     path:   /load/category
     defaults: { _controller: MyShopAdminBundle:Default:loadCategory }
+
+my_shop_admin.import_csv_file:
+    path:  /import/csv
+    defaults: {_controller:  MyShopAdminBundle:LoadingProduct:importProducts}
+
+my_shop_admin.export_csv_file:
+    path:  /export/csv
+    defaults: {_controller:  MyShopAdminBundle:LoadingProduct:exportProduct}

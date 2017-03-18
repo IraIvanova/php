@@ -1,0 +1,43 @@
+<html>
+<head>
+    <link rel="stylesheet" href="{{ asset("bundles/myshopdefault/main.css") }}" />
+
+</head>
+{% block head_js %}{%  endblock %}
+<body>
+<table border="1" style="width: 100%">
+    <tr>
+        <td valign="top" style="width: 400px">
+       
+            <ul>
+                <li><a href="{{ path("my_shop_admin.news_list") }}">Новости</a></li>
+                <li><a href="{{ path("my_shop_admin.product_list") }}">Товары</a></li>
+                <li><a href="{{ path("my_shop_admin.category_list") }}">Категории товаров</a></li>
+                <li><a href="{{ path("my_shop_admin.news_category_list") }}">Категории новостей</a></li>
+                <li><a href="{{ path("my_shop_admin.user_list") }}">User List</a></li>
+                <li><a href="{{ path("my_shop_admin.demo_user_load") }}">Demo user load</a>
+                <li><a href="{{ path("my_shop_admin.demo_product_load") }}">Demo product load</a></li>
+                <li><a href="{{ path("my_shop_admin.demo_category_load") }}">Demo category load</a></li>
+                 {{ "Max"|greetings }}
+            </ul>
+        </td>
+        <td valign="top">
+
+{% for mes in app.session.flashBag.get('success') %}
+{{ mes }}
+{% endfor %}
+
+            {% for flash_message in app.session.flashBag.get('error') %}
+                <b style="color: red">Ошибка!</b> {{ flash_message }}<br>
+            {% endfor %}
+
+            {% block body %}
+            {% endblock %}
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+
+
+
