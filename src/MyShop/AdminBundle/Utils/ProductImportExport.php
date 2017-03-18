@@ -13,10 +13,12 @@ class ProductImportExport
      * @var EntityManager
      */
  private $manager;
+ private $kernel;
 
- public function __construct(EntityManagerInterface $manager)
+ public function __construct(EntityManagerInterface $manager, $kernel)
  {
      $this->manager = $manager;
+     $this->kernel = $kernel;
  }
 
 
@@ -24,20 +26,35 @@ class ProductImportExport
  {
      $products=$this->manager->createQuery("select p from MyShopDefaultBundle:Product p")->getResult();
 
-     $csv= "model,description,price"."\n";
+
+     $iconFilePath= $this->kernel->getRootDir(). "/../src/MyShop/photo/";
+     $loadImagePath = $this->kernel->getRootDir(). "/../web/photos/";
+
+     $csv= "model,description,price, iconFileName"."\n";
 
      /**@var Product $product*/
      foreach($products as $product)
      {
          $csv .= $product->getModel() . "," . $product->getDescription() . "," . $product->getPrice() . "," . $product->getIconFileName(). "\n";
-     }
+       if ($product->getIconFileName()) {
+           copy($loadImagePath . $product->getIconFileName(), $iconFilePath . $product->getIconFileName());
+       }
+       }
 
      return $csv;
  }
 
  public  function parseCcvData($filePath)
  {
+
+     $iconFilePath= $this->kernel->getRootDir(). "/../src/MyShop/photo/";
+     $loadImagePath = $this->kernel->getRootDir(). "/../web/photos/";
+
      $fh = fopen($filePath, "r");
+
+
+
+     fgetcsv($fh);
 
      while(($data = fgetcsv($fh)) != false ){
 
@@ -46,12 +63,10 @@ class ProductImportExport
              $product->setModel($data[0]);
              $product->setDescription($data[1]);
              $product->setPrice($data[2]);
-
-           //  $product->setIconFileName("346546.jpg");
-             //$product->getMainPhotoFileName("xdfdg.png");
-             var_dump($product);
-             die();
-            $this->manager->persist($product);
+             $product->setIconFileName($data[3]);
+             copy($iconFilePath .$data[3], $loadImagePath. $data[3]);
+             $product->setMainPhotoFileName("xdfdg.png");
+             $this->manager->persist($product);
              $this->manager->flush();
 
      }

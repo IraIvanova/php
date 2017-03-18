@@ -43,6 +43,7 @@ services:
           class:   MyShop\AdminBundle\Utils\ProductImportExport
           arguments:
              - "@doctrine.orm.entity_manager"
+             - "@kernel"
         
 
  
