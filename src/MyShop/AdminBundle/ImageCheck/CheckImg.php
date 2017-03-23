@@ -30,27 +30,12 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
   }
 }
  */
-class CheckImg
+class CheckImg extends BaseCheck
 {
-    private $imageTypeList;
-
-    public function __construct($imageTypeList)
+  
+    public function check( UploadedFile $photoFile)
     {
-        $this->imageTypeList = $imageTypeList;
-    }
-
-    public function check($photoFile)
-    {
-        $checkTrue = false;
-        $mimeType = $photoFile->getClientMimeType();
-        foreach ($this->imageTypeList as $imgType) {
-            if ($mimeType == $imgType[1]) {
-                $checkTrue = true;
-            }
-        }
-        if ($checkTrue !== true) {
-            throw new \InvalidArgumentException("Mime type is blocked!");
-        }
+        $this->checkMimeType($photoFile);
 
         $fileExt = $photoFile->getClientOriginalExtension();
         $checkTrue = false;

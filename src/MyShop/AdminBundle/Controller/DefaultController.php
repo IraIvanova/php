@@ -5,9 +5,47 @@ namespace MyShop\AdminBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
+    
+    public function uploadImageAction(Request $request)
+    {
+        /**@var UploadedFile $file */
+        $file = $request->files->get("upload");
+
+        $dir= $this->get("kernel")->getRootDir()."/../web/photos/";
+        $file->move($dir, $file->getClientOriginalName());
+
+        return new Response("/photos/". $file->getClientOriginalName());
+    }
+
+ 
+   public function loadUserAction()
+{
+    $this->get("load_predata")->loadUsers();
+    $this->addFlash("success", "Demo user is added!");
+
+    return $this->redirectToRoute("my_shop_admin.index");
+}
+
+    public function loadProductAction()
+    {
+        $this->get("load_predata")->loadProduct();
+        $this->addFlash("success", "Demo product is added!");
+
+        return $this->redirectToRoute("my_shop_admin.index");
+    }
+
+    public function loadCategoryAction()
+    {
+        $this->get("load_predata")->loadCategory();
+        $this->addFlash("success", "Demo category is added!");
+
+        return $this->redirectToRoute("my_shop_admin.index");
+    }
     /**
      * @Template()
     */
@@ -46,28 +84,5 @@ class DefaultController extends Controller
  return ["newArr"=> $newArr];*/
 }
 
-public function loadUserAction()
-{
-    $this->get("load_predata")->loadUsers();
-    $this->addFlash("success", "Demo user is added!");
-
-    return $this->redirectToRoute("my_shop_admin.index");
-}
-
-    public function loadProductAction()
-    {
-        $this->get("load_predata")->loadProduct();
-        $this->addFlash("success", "Demo product is added!");
-
-        return $this->redirectToRoute("my_shop_admin.index");
-    }
-
-    public function loadCategoryAction()
-    {
-        $this->get("load_predata")->loadCategory();
-        $this->addFlash("success", "Demo category is added!");
-
-        return $this->redirectToRoute("my_shop_admin.index");
-    }
 
 }

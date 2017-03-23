@@ -17,6 +17,8 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new MyShop\DefaultBundle\MyShopDefaultBundle(),
             new MyShop\AdminBundle\MyShopAdminBundle(),
+            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
 
        
         ];

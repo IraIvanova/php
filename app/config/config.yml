@@ -71,3 +71,11 @@ swiftmailer:
     password:  "%mailer_password%"
     spool: { type: memory }
 
+ivory_ck_editor:
+    default_config: my_config
+    configs:
+        my_config:
+            filebrowserUploadRoute: "myshop_admin.upload_image"
+
+      
+

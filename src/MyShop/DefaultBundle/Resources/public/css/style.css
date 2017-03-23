@@ -3394,4 +3394,29 @@ td.invert-image a img {
 .w3agile_description p {
     font-size: 13px;
 }
+.small_picture{
+    width:33%;
+    height:50px;
+    background-color: red;
+   
+}
+.pic1{
+    width:50px;
+    float:left;
+    height:40px;
+    float:left;
+}
+.pic2{
+    width:50px;
+    float:left;
+    height:40px;
+    float:left;
+}
+.pic3{
+    width:50px;
+    float:left;
+    height:40px;
+    float:left;
+}
+
 }

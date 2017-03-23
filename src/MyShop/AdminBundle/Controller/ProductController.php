@@ -42,6 +42,7 @@ class ProductController extends Controller
                     return $this->redirectToRoute("my_shop_admin.product_add");
                 }
                 $productId = $product->getId();
+                
                 $filesAr = $request->files->get("myshop_defaultbundle_product");
 
                 /** @var UploadedFile $iconFile */
@@ -80,7 +81,9 @@ class ProductController extends Controller
 
                 $mailer->send($message);*/
 
-
+                $event = new ProductAddEvent($product);
+                $this->get("event_dispatcher")->dispatch("product_add_event", $event);
+               
                 $session = $this->get('session');
                 $session->set('notification', $this->get('session')->get('notification') . "product added. ");
 

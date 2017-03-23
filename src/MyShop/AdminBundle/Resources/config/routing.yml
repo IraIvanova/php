@@ -191,3 +191,27 @@ my_shop_admin.import_csv_file:
 my_shop_admin.export_csv_file:
     path:  /export/csv
     defaults: {_controller:  MyShopAdminBundle:LoadingProduct:exportProduct}
+
+my_shop_admin.page_list:
+    path: /page/list
+    defaults: {_controller: MyShopAdminBundle:Page:index }
+
+my_shop_admin.page_add:
+    path: /page/add
+    defaults: {_controller: MyShopAdminBundle:Page:add }
+
+my_shop_admin.page_edit:
+    path: /page/edit/{id}
+    defaults: {_controller: MyShopAdminBundle:Page:edit }
+    requirements:
+            id: \d+
+
+my_shop_admin.page_delete:
+    path: /page/{id}/delete
+    defaults: { _controller: MyShopAdminBundle:Page:delete }
+    requirements:
+            id: \d+            
+
+myshop_admin.upload_image:
+    path: /upload_image
+    defaults: {_controller: MyShopAdminBundle:Default:uploadImage }            

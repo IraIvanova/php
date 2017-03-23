@@ -80,7 +80,7 @@ class Product implements \JsonSerializable
     /**
      * @var string
      *
-     * @ORM\Column(name="icon_file_name", type="string", length=255, )
+     * @ORM\Column(name="icon_file_name", type="string", length=255, nullable=true )
      */
     private $iconFileName;
 
@@ -88,7 +88,7 @@ class Product implements \JsonSerializable
     /**
      * @var string
      *
-     * @ORM\Column(name="main_photo_file_name", type="string", length=255)
+     * @ORM\Column(name="main_photo_file_name", type="string", length=255,  nullable=true)
      */
     private $mainPhotoFileName;
 

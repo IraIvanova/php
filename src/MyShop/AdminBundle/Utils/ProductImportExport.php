@@ -13,12 +13,16 @@ class ProductImportExport
      * @var EntityManager
      */
  private $manager;
+ 
  private $kernel;
 
- public function __construct(EntityManagerInterface $manager, $kernel)
+ private $eventDispatcer;
+
+ public function __construct(EntityManagerInterface $manager, $kernel, EventDispatcher $eventDispatcher)
  {
      $this->manager = $manager;
      $this->kernel = $kernel;
+     $this->eventDispatcher = $eventDispatcer;
  }
 
 
@@ -28,9 +32,9 @@ class ProductImportExport
 
 
      $iconFilePath= $this->kernel->getRootDir(). "/../src/MyShop/photo/";
-     $loadImagePath = $this->kernel->getRootDir(). "/../web/photos/";
+     $loadImagePath = $this->kernel->getRootDir(). "/web/bundles/myshopdefault/photos/";
 
-     $csv= "model,description,price, iconFileName"."\n";
+     $csv= "model,description,price, iconFileName "."\n";
 
      /**@var Product $product*/
      foreach($products as $product)
@@ -48,7 +52,7 @@ class ProductImportExport
  {
 
      $iconFilePath= $this->kernel->getRootDir(). "/../src/MyShop/photo/";
-     $loadImagePath = $this->kernel->getRootDir(). "/../web/photos/";
+     $loadImagePath = $this->kernel->getRootDir(). "//web/photos/";
 
      $fh = fopen($filePath, "r");
 
@@ -69,6 +73,11 @@ class ProductImportExport
              $this->manager->persist($product);
              $this->manager->flush();
 
+             $event = new ProductAddEvent($product);
+             $this->get("event_dispatcher")->dispatch("product_add_event", $event);
+                   
+               
+        
      }
      fclose($fh);
  }

@@ -1,8 +1,19 @@
 services:
+    myshop_admin.product_subscriber:
+        class: MyShop\AdminBundle\Event\ProductSubscriber
+        tags:
+            - { name: kernel.event_listener, event: product_add_event, method: onProductAddEvent}
+    
     myshop_admin.check_img:
         class: MyShop\AdminBundle\ImageCheck\CheckImg
+        parent: "myshop_admin.base_check"
+     
+
+    myshop_admin.base_check:
+        class: MyShop\AdminBundle\ImageCheck\BaseCheck
+        abstract: true
         arguments:
-            - "%upload_image_type_list%"
+            - "%upload_image_type_list%"         
 
     myshop_admin.image_name_generator:
         class: MyShop\AdminBundle\ImageCheck\GenerateName
@@ -44,6 +55,7 @@ services:
           arguments:
              - "@doctrine.orm.entity_manager"
              - "@kernel"
+             - "@event_dispatcher"
         
 
  
