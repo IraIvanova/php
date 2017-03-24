@@ -44,6 +44,9 @@ span.glyphicon.glyphicon-shopping-cart.my-cart-icon.my-cart-icon-affix {
     display: block;
     text-align: center;
 }
+.snipcart-thumb img{
+    height: 80px;
+}
 .my-cart-icon-affix i {
     background: #fe9126 !important;
 }
@@ -3401,22 +3404,28 @@ td.invert-image a img {
    
 }
 .pic1{
+        float: left;
+    position: relative;
     width:50px;
-    float:left;
+    
     height:40px;
-    float:left;
+   
 }
 .pic2{
+    float: left;
+    position: relative;
     width:50px;
-    float:left;
+  
     height:40px;
-    float:left;
+   
 }
 .pic3{
+        float: left;
+    position: relative;
     width:50px;
-    float:left;
+
     height:40px;
-    float:left;
+    
 }
 
 }

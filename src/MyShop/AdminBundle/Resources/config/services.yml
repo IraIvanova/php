@@ -8,12 +8,11 @@ services:
         class: MyShop\AdminBundle\ImageCheck\CheckImg
         parent: "myshop_admin.base_check"
      
-
     myshop_admin.base_check:
         class: MyShop\AdminBundle\ImageCheck\BaseCheck
         abstract: true
         arguments:
-            - "%upload_image_type_list%"         
+             - "%upload_image_type_list%"         
 
     myshop_admin.image_name_generator:
         class: MyShop\AdminBundle\ImageCheck\GenerateName
