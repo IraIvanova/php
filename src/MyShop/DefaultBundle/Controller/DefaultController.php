@@ -65,7 +65,7 @@ class DefaultController extends Controller
         $repository = $manager->getRepository("MyShopDefaultBundle:Product");
         $product = $repository->find($id);
 
-        if($product == null)
+        if ($product == null)
             throw new NotFoundHttpException();
 
         $photo = $product->getPhotos();
@@ -140,13 +140,37 @@ class DefaultController extends Controller
             'id' => rand()
         ];
         $newRequest = json_encode($request);
-        $response = $client->send( $newRequest );
+        $response = $client->send($newRequest);
 
         return new Response($response);
     }
-}
 //     $client = new Client();
 //     $response = $client->request("POST", "http://127.0.0.1:8000/api/jsonrpc");
 //     var_dump($response);
 //     die();
+    public function listAction(Request $request)
+    {
+        $manager = $this->getDoctrine()->getManager();
 
+
+        $allCategories = $manager->createQuery("select cat from MyShopDefaultBundle:Category cat where cat.parentCategory is null")->getResult();
+
+   return $this->render(
+            'MyShopDefaultBundle:Default:list.html.twig',
+            array("allCategories" => $allCategories)
+        );
+    }
+
+    /**
+     * @Template()
+     */
+    public function categoryAction()
+    {
+        $manager = $this->getDoctrine()->getManager();
+
+
+        $allCategories = $manager->createQuery("select cat from MyShopDefaultBundle:Category cat where cat.parentCategory is null")->getResult();
+
+        return ["allCategories" => $allCategories];
+    }
+}

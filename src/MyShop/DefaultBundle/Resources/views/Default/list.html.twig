@@ -1,0 +1,57 @@
+
+<!-- navigation -->
+<div class="navigation-agileits">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header nav_2">
+                <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="{{ path("myshop.index_page") }}" class="act">Главная</a></li>
+                    <!-- Mega Menu -->
+{% for category in allCategories %}
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ category.name }}<b class="caret"></b></a>
+
+
+        <ul class="dropdown-menu multi-column columns-3">
+
+            <div class="row">
+                <div class="multi-gd-img">
+                    {% if category.getChildrenCategories() %}
+                    <ul class="multi-column-dropdown">
+
+                        {% for child in category.ChildrenCategories %}
+                        <li><a href="#">{{ child.name }}</a></li>
+
+{% endfor %}
+                        <hr>
+                        <li><a href="{{ path("myshop.product_list") }}">Все категории >></a></li>
+                        {% endif %}
+
+                    </ul>
+                </div>
+
+            </div>
+        </ul>
+    </li>
+
+    {% endfor %}
+
+                    <li><a href="{{ path("myshop.page", { 'pageKey':'about' }) }}">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- //navigation -->
+

@@ -1,0 +1,17 @@
+<h2>Categories</h2>
+    {% for category in allCategories %}
+
+            <li><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i>{{ category.name }}</a></li>
+            {% if category.getChildrenCategories() %}
+            <ul>
+
+                {% for child in category.ChildrenCategories %}
+                <li><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i>{{ child.name }}</a></li>
+                {% endfor %}
+
+            </ul>
+            {% endif %}
+           
+    {% endfor %}
+
+

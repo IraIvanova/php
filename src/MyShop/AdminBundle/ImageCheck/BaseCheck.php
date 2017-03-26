@@ -6,21 +6,19 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 abstract class BaseCheck
 { 
-    protected $supportImageTypeList;
+    protected $imageTypeList;
 
-    public function __constructor($supportImageTypeList)
+    public function __construct($imageTypeList)
     {
-        $this->supportImageTypeList = $supportImageTypeList; 
+        $this->imageTypeList = $imageTypeList; 
     }
     
     public function checkMimeType(UploadedFile $photoFile)
     {
         $checkTrue = false;
         $mimeType = $photoFile->getClientMimeType();
-        var_dump( $this->supportImageTypeList  );
-            die();
-        foreach ($this->supportImageTypeList as $imgType) {
-            
+        foreach ($this->imageTypeList as $imgType) {
+            var_dump($this->imageTypeList);
                if ($mimeType == $imgType[1]) {
                 $checkTrue = true;
             }

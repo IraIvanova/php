@@ -38,3 +38,7 @@ myshop.curl_client_json:
 myshop.page:
     path: /{pageKey}
     defaults: { _controller: MyShopDefaultBundle:Page:index }
+
+myshop.navigation:
+    path: /navigation
+    defaults: { _controller: MyShopDefaultBundle:Default:list }

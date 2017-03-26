@@ -1,9 +1,0 @@
-{% extends "@MyShopDefault/layout.html.twig" %}
-
-{% block body %}
-    <h3>Редактирование товара</h3>
-    <form method="post" action="{{ path('myshop.product_edit', {id:product.id}) }}">
-        {{ form_widget(form) }}
-        <input type="submit" />
-    </form>
-{% endblock %}

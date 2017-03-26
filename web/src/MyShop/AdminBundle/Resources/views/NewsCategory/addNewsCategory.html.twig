@@ -1,8 +1,0 @@
-{% extends "@MyShopAdmin/layout.html.twig" %}
-
-{% block body %}
-<form action="{{ path("my_shop_admin.news_category_add") }}" method="POST">
-    {{ form_widget(form) }}
-    <input type="submit"/>
-</form>
-{% endblock %}
