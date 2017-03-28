@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new MyShop\AdminBundle\MyShopAdminBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
 
        
         ];

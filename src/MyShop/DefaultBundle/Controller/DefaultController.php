@@ -80,15 +80,20 @@ class DefaultController extends Controller
     /**
      * @Template()
      */
-    public function showProductListAction()
+    public function showProductListAction($page)
     {
-        $doctrine = $this->getDoctrine();
-        $manager = $doctrine->getManager();
+        $query = $this->getDoctrine()
+            ->getManager()
+            ->createQuery("select p from MyShopDefaultBundle:Product p ");
+        $paginator  = $this->get('knp_paginator');
 
-        $repository = $manager->getRepository("MyShopDefaultBundle:Product");
+        $productList = $paginator->paginate(
+            $query, /* query NOT result */
+            $page/*page number*/,
+            9/*limit per page*/
+        );
 
-        $productList = $repository->findAll();
-
+       
 
         return [
             "productList" => $productList

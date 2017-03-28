@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Validator\ConstraintViolationList;
 
-class ProductController extends Controller
+class ProductController extends BaseController
 {
 
     /**
@@ -167,14 +167,19 @@ class ProductController extends Controller
          * @Template()
          */
 
-       public function listAction()
+       public function listAction($page)
         {
-            $productList = $this->getDoctrine()
+            $query = $this->getDoctrine()
                 ->getManager()
-                ->createQuery("select p, c from MyShopDefaultBundle:Product p join p.category c")
-                ->getResult();
-            $session = $this->get('session');
-            $session->set('history', $this->get('session')->get('history') . 'product update ');
+                ->createQuery("select p,c  from MyShopDefaultBundle:Product p join p.category c ");
+                 $paginator  = $this->get('knp_paginator');
+
+            $productList = $paginator->paginate(
+            $query, /* query NOT result */
+            $page/*page number*/,
+            3/*limit per page*/
+        );
+
             return ["productList" => $productList];
         }
 

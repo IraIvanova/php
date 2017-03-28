@@ -1,311 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/config/routing.yml" line="107" />
+    <bookmark url="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/config/routing.yml" line="109" />
     <bookmark url="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/DefaultController.php" line="16" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c0edca2-d8b1-4678-b31b-60f3772a0099" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/app/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/app/AppCache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/app/AppKernel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/app/Resources/views/base.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/app/Resources/views/default/index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/app/autoload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/app/config/config.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/app/config/config_dev.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/app/config/config_prod.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/app/config/config_test.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/app/config/parameters.yml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/app/config/routing.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/app/config/routing_dev.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/app/config/security.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/app/config/services.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bin/console" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bin/symfony_requirements" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/composer.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/composer.phar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Controller/CategoryController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Controller/DefaultController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Controller/LoginController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Controller/NewsCategoryController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Controller/NewsController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Controller/NewsPhotoController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Controller/ProductController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Controller/ProductPhotoController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Controller/UserController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/DTO/UploadedImageResult.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Entity/User.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Form/UserType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/ImageCheck/CheckImg.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/ImageCheck/GenerateName.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/ImageCheck/MailSender.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/ImageCheck/PhotoRemover.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/ImageCheck/ResizeImage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/ImageCheck/UploadImageService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/MyShopAdminBundle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Repository/UserRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/config/routing.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/config/services.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/Category/add.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/Category/edit.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/Category/list.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/Category/tree.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/Default/index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/Email/index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/Login/login.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/News/addNews.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/News/editNews.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/News/list.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/NewsCategory/addNewsCategory.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/NewsCategory/editNewsCategory.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/NewsCategory/newsList.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/NewsPhoto/add.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/NewsPhoto/edit.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/NewsPhoto/list.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/Product/add.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/Product/createIcon.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/Product/edit.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/Product/list.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/ProductPhoto/add.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/ProductPhoto/edit.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/ProductPhoto/list.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/ProductPhoto/photo.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/User/add.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/User/edit.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/User/userList.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Resources/views/layout.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/AdminBundle/Twig/Extension.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Controller/API/Client/CurlClient.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Controller/API/JsonRPC/JsonRPCController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Controller/API/REST/ProductController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Controller/DefaultController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/DataFixtures/ORM/LoadUserData.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Entity/Category.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Entity/News.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Entity/NewsCategory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Entity/NewsPhoto.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Entity/Product.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Entity/ProductPhoto.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Form/CategoryType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Form/IconPhotoType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Form/NewsCategoryType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Form/NewsPhotoType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Form/NewsType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Form/ProductPhotoType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Form/ProductType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/MyShopDefaultBundle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/PreData/LoadMyPreData.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Repository/CategoryRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Repository/IconPhotoRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Repository/NewsCategoryRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Repository/NewsPhotoRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Repository/NewsRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Repository/ProductPhotoRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Repository/ProductRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/config/routing.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/config/routing/newsphoto.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/config/services.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/css/skdslider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/111.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/22.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/44.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/b1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/b3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/best_android_phone_2014.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/bv1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/bv2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/bv3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/bv4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/bv5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/bv6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/bv7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/bv8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/bv8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/bv9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/card.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/check.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/close_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/gu1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/gu2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/gu3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/gu4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/gu5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/gu6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/gu7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/gu8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/gu9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/hh1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/hh2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/hh3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/hh4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/hh5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/hh6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/hh7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/hh8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/hh9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/icon1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/icon2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/meizu-m1-note.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/offer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/p2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/p3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/p4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pc1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pc2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pc3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pc4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pc5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pc6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pc7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pc8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pc9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pf1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pf2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pf3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pf4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pf5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pf6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pf7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pf8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/pf9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/si1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/star.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/star1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/t1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/t2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/t3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/t4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/images/tick.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/js/easing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/js/jquery-1.11.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/js/minicart.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/js/move-top.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/js/responsiveslides.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/js/skdslider.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/public/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/views/Default/categories.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/views/Default/editProduct.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/views/Default/index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/views/Default/newsList.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/views/Default/showNews.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/views/Default/showNewsList.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/views/Default/showProduct.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/views/Default/showProductList.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/src/MyShop/DefaultBundle/Resources/views/layout.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/app.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/app_dev.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/apple-touch-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/config.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/684609.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/6846090.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_1029014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_1376455.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_1763714.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_1906539.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_2151363.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_4170779.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_4340434.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_4775282.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_4927464.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_5288460.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_5602121.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_5995344.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_6513725.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_6823992.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_7460216.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_7678420.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_7975359.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_8178899.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_8377124.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_8504686.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_8720730.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_9091844.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_9132394.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_9353495.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_9372844.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/icon_9529586.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/main_1159775.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/main_2271566.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/main_2931947.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/main_3525070.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/main_4385060.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/main_8250526.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/main_9265293.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_1412010.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_1546268.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_1703970.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_2332809.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_2654910.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_2966258.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_3525744.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_3914647.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_4330554.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_4815225.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_5683438.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_5915615.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_6970913.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_7248432.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_7665089.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_7790518.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_8179120.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_8755939.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_8834894.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_8954164.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_9561301.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/mainphoto_9821769.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/medium_6846090.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/nophoto.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/photos/small_6846090.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/web/robots.txt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/categories.html.twig" afterPath="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/category.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/project.iml" afterPath="$PROJECT_DIR$/.idea/project.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/ProductController.php" afterPath="$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/ProductController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyShop/AdminBundle/ImageCheck/BaseCheck.php" afterPath="$PROJECT_DIR$/src/MyShop/AdminBundle/ImageCheck/BaseCheck.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/Product/list.html.twig" afterPath="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/Product/list.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/layout.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyShop/DefaultBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/MyShop/DefaultBundle/Controller/DefaultController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/public/css/style.css" afterPath="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/showProduct.html.twig" afterPath="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/showProduct.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/showProductList.html.twig" afterPath="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/showProductList.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/layout.html.twig" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -336,94 +50,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1365">
-              <caret line="91" column="70" selection-start-line="91" selection-start-column="20" selection-end-line="91" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="63" selection-start-line="41" selection-start-column="0" selection-end-line="43" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="category.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/category.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/ProductController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="87" column="15" selection-start-line="87" selection-start-column="15" selection-end-line="87" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/bundles/myshopdefault/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21555">
-              <caret line="1437" column="1" selection-start-line="1437" selection-start-column="1" selection-end-line="1437" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/list.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="67" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showProductList.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="showProductList.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/showProductList.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showProduct.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/showProduct.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CategoryController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/CategoryController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1230">
-              <caret line="87" column="47" selection-start-line="87" selection-start-column="47" selection-end-line="87" selection-end-column="47" />
+            <state relative-caret-position="300">
+              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
               <folding>
-                <element signature="e#49#90#0#PHP" expanded="true" />
-                <marker date="1488556519751" expanded="true" signature="2137:2218" ph="select cat f... MyShopDefaultBundle" />
+                <element signature="e#883#902#0#Twig" expanded="true" />
+                <element signature="e#1032#1051#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/ProductController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="173" column="31" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="96" />
+              <folding>
+                <marker date="1490732180747" expanded="true" signature="5905:5951" ph="select p fro... MyShopDefaultBundle" />
+                <marker date="1490732180747" expanded="true" signature="5905:5969" ph="select p,c f... MyShopDefaultBundle" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductStorage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Storage/ProductStorage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+              <folding>
+                <element signature="e#127#167#0#PHP" expanded="true" />
+                <marker date="1490732937576" expanded="true" signature="676:740" ph="select p,c f... MyShopDefaultBundle" />
               </folding>
             </state>
           </provider>
@@ -432,12 +92,82 @@
       <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2355">
-              <caret line="166" column="20" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
+            <state relative-caret-position="599">
+              <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
               <folding>
-                <marker date="1490533079321" expanded="true" signature="3893:3974" ph="select cat f... MyShopDefaultBundle" />
-                <marker date="1490533079321" expanded="true" signature="4329:4410" ph="select cat f... MyShopDefaultBundle" />
+                <marker date="1490720754888" expanded="true" signature="2292:2335" ph="select p fro... MyShopDefaultBundle" />
+                <marker date="1490720754888" expanded="true" signature="4050:4131" ph="select cat f... MyShopDefaultBundle" />
+                <marker date="1490720754888" expanded="true" signature="4486:4567" ph="select cat f... MyShopDefaultBundle" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showProduct.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/showProduct.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="54" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/NewsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#49#86#0#PHP" expanded="false" />
+                <element signature="e#1095#1121#1#PHP" expanded="false" />
+                <element signature="e#1407#1432#1#PHP" expanded="false" />
+                <element signature="e#1647#1673#1#PHP" expanded="false" />
+                <element signature="e#1841#1866#1#PHP" expanded="false" />
+                <element signature="e#2007#2033#1#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/DefaultController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="39" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyExceptionListener.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Event/MyExceptionListener.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="24" selection-end-column="41" />
+              <folding>
+                <element signature="e#45#91#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/BaseController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -456,13 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="/var/www/html/i/test.php" />
-        <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Controller/API/Client/CURL/CURLController.php" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/Symfony/app/Resources/TwigBundle/views/Exception/error.html.twig" />
-        <option value="$PROJECT_DIR$/Symfony/app/Resources/TwigBundle/views/Exception/error404.html.twig" />
-        <option value="$PROJECT_DIR$/Symfony/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/DataFixtures/ORM/LoadUserData.php" />
         <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/Symfony/app/config/parameters.yml.dist" />
@@ -476,23 +199,18 @@
         <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Controller/API/Client/CurlClient.php" />
         <option value="$PROJECT_DIR$/web/app.php" />
         <option value="$PROJECT_DIR$/var/logs/dev.log" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" />
         <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/CategoryController.php" />
         <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/LoadingProduct.php" />
         <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/LoadingProduct/importProducts.html.twig" />
         <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/LoadingProductController.php" />
-        <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Utils/ProductImportExport.php" />
         <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/Page/add.html.twig" />
         <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Entity/Product.php" />
         <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Page/index.html.twig" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Form/PageType.php" />
         <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/Page/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/Page/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/PageController.php" />
         <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Repository/PageRepository.php" />
         <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Mapper/ProductMapper.php" />
@@ -500,13 +218,25 @@
         <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Entity/Page.php" />
         <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/categories.html.twig" />
-        <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/list.html.twig" />
-        <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/showProductList.html.twig" />
         <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/category.html.twig" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/Product/list.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/pagination.html.twig" />
+        <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/BaseController.php" />
         <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/ProductController.php" />
+        <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Storage/ProductStorage.php" />
+        <option value="$PROJECT_DIR$/src/MyShop/AdminBundle/Event/MyExceptionListener.php" />
+        <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/showProduct.html.twig" />
+        <option value="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/showProductList.html.twig" />
       </list>
     </option>
   </component>
@@ -564,6 +294,8 @@
       <path value="$PROJECT_DIR$/vendor/egeloen/json-builder" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-menu" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-menu-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
@@ -597,6 +329,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -885,6 +619,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Storage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyShop" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -1013,6 +773,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Event" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyShop" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -1031,10 +817,26 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1046,16 +848,16 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/photos" />
-      <recent name="$PROJECT_DIR$/src/MyShop/DefaultBundle/Controller" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/Page" />
       <recent name="$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Page" />
       <recent name="$PROJECT_DIR$/src/MyShop/DefaultBundle/Controller" />
       <recent name="$PROJECT_DIR$/src/MyShop/AdminBundle/Controller" />
       <recent name="$PROJECT_DIR$/src/MyShop/photo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/photos" />
+      <recent name="$PROJECT_DIR$/src/MyShop/DefaultBundle/Controller" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.MailSender.php">
@@ -1162,11 +964,15 @@
       <workItem from="1490523820691" duration="1805000" />
       <workItem from="1490525813319" duration="9214000" />
       <workItem from="1490557059320" duration="1426000" />
+      <workItem from="1490614909222" duration="1053000" />
+      <workItem from="1490639952448" duration="10392000" />
+      <workItem from="1490712883700" duration="3888000" />
+      <workItem from="1490721499981" duration="8565000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311321000" />
+    <option name="totallyTimeSpent" value="335219000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1181,9 +987,9 @@
     <frame x="66" y="64" width="1086" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22007367" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2145488" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.027510317" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1208,98 +1014,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/var/bootstrap.php.cache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Symfony/src/MyShop/DefaultBundle/Resources/views/Default/showProduct.html.twig" />
-    <entry file="file://$PROJECT_DIR$/var/logs/dev.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-39">
-          <caret line="46" column="166" selection-start-line="46" selection-start-column="166" selection-end-line="46" selection-end-column="166" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_6.php" />
-    <entry file="file://$PROJECT_DIR$/var/logs/prod.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5484">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/NewsCategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/Product/add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/LoadingProduct/importProducts.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/ImageCheck/UploadImageService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/ImageCheck/CheckImg.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/ProductPhotoController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
@@ -1311,21 +1030,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="40" column="82" selection-start-line="40" selection-start-column="82" selection-end-line="40" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1363,13 +1067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Form/PageType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1402,13 +1099,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/PageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1461,74 +1151,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="216" column="79" selection-start-line="216" selection-start-column="79" selection-end-line="216" selection-end-column="79" />
-          <folding>
-            <marker date="1490277210664" expanded="true" signature="5764:5866" ph="my_shop_a….page_list: &lt;2 keys&gt;" />
-            <marker date="1490277210664" expanded="true" signature="5814:5866" ph="defaults: {1 key}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="643">
           <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="76" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/Product/list.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/CategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="87" column="47" selection-start-line="87" selection-start-column="47" selection-end-line="87" selection-end-column="47" />
-          <folding>
-            <element signature="e#49#90#0#PHP" expanded="true" />
-            <marker date="1488556519751" expanded="true" signature="2137:2218" ph="select cat f... MyShopDefaultBundle" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="63" selection-start-line="41" selection-start-column="0" selection-end-line="43" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/showProduct.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2355">
-          <caret line="166" column="20" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
-          <folding>
-            <marker date="1490533079321" expanded="true" signature="3893:3974" ph="select cat f... MyShopDefaultBundle" />
-            <marker date="1490533079321" expanded="true" signature="4329:4410" ph="select cat f... MyShopDefaultBundle" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1544,7 +1170,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="67" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1552,15 +1177,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21555">
           <caret line="1437" column="1" selection-start-line="1437" selection-start-column="1" selection-end-line="1437" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/showProductList.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1568,15 +1184,248 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="28" column="66" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="182" column="54" selection-start-line="182" selection-start-column="54" selection-end-line="182" selection-end-column="54" />
+          <folding>
+            <marker date="1490641138978" expanded="true" signature="5820:5922" ph="my_shop_a….page_list: &lt;2 keys&gt;" />
+            <marker date="1490641138978" expanded="true" signature="5870:5922" ph="defaults: {1 key}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/Category/tree.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1096">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/twitter_bootstrap_pagination.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="89" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/twitter_bootstrap_v3_pagination.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="85" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/semantic_ui_pagination.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="49" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/sortable_link.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/sliding.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/bulma_pagination.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/Resources/views/Pagination/foundation_v5_pagination.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="98" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/Product/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/list.html.twig" />
+    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/views/pagination.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="87" column="39" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/PageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding>
+            <element signature="e#49#86#0#PHP" expanded="false" />
+            <element signature="e#521#547#1#PHP" expanded="false" />
+            <element signature="e#1122#1147#1#PHP" expanded="false" />
+            <element signature="e#1363#1389#1#PHP" expanded="false" />
+            <element signature="e#1791#1816#1#PHP" expanded="false" />
+            <element signature="e#2014#2040#1#PHP" expanded="false" />
+            <element signature="e#2209#2234#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/NewsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#49#86#0#PHP" expanded="false" />
+            <element signature="e#1095#1121#1#PHP" expanded="false" />
+            <element signature="e#1407#1432#1#PHP" expanded="false" />
+            <element signature="e#1647#1673#1#PHP" expanded="false" />
+            <element signature="e#1841#1866#1#PHP" expanded="false" />
+            <element signature="e#2007#2033#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+          <folding>
+            <marker date="1490720754888" expanded="true" signature="2292:2335" ph="select p fro... MyShopDefaultBundle" />
+            <marker date="1490720754888" expanded="true" signature="4050:4131" ph="select cat f... MyShopDefaultBundle" />
+            <marker date="1490720754888" expanded="true" signature="4486:4567" ph="select cat f... MyShopDefaultBundle" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Controller/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="87" column="15" selection-start-line="87" selection-start-column="15" selection-end-line="87" selection-end-column="15" />
+        <state relative-caret-position="344">
+          <caret line="173" column="31" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="96" />
+          <folding>
+            <marker date="1490732180747" expanded="true" signature="5905:5951" ph="select p fro... MyShopDefaultBundle" />
+            <marker date="1490732180747" expanded="true" signature="5905:5969" ph="select p,c f... MyShopDefaultBundle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Storage/ProductStorage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+          <folding>
+            <element signature="e#127#167#0#PHP" expanded="true" />
+            <marker date="1490732937576" expanded="true" signature="676:740" ph="select p,c f... MyShopDefaultBundle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/AdminBundle/Event/MyExceptionListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="24" selection-end-column="41" />
+          <folding>
+            <element signature="e#45#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/showProduct.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="54" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyShop/DefaultBundle/Resources/views/Default/showProductList.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding>
+            <element signature="e#883#902#0#Twig" expanded="true" />
+            <element signature="e#1032#1051#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

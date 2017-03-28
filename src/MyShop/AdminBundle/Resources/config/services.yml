@@ -1,4 +1,9 @@
 services:
+    myshop_admin.my_exception_listener:
+        class: MyShop\AdminBundle\Event\MyExceptionListener
+        tags:
+          - { name: kernel.event_listener, event: kernel.exception}
+
     myshop_admin.product_subscriber:
         class: MyShop\AdminBundle\Event\ProductSubscriber
         tags:
