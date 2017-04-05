@@ -1,4 +1,11 @@
 services:
+    myshop_admin.product.storage:
+        class: MyShop\AdminBundle\Storage\ProductStorage
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - "@knp_paginator"
+
+
     myshop_admin.my_exception_listener:
         class: MyShop\AdminBundle\Event\MyExceptionListener
         tags:

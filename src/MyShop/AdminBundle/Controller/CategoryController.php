@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class CategoryController extends Controller
 {
@@ -130,16 +131,8 @@ $manager->flush();
 return $this->redirectToRoute("my_shop_admin.category_list");
 
  }
-
-    /**
-     * @Template()
-     */
-    /*public function listAction()
-    {
-        $categoryList = $this->getDoctrine()->getRepository("MyShopDefaultBundle:Category")->findAll();
-
-        return ["categoryList" => $categoryList];
-    }*/
+   
+  
     /**
      * @Template()
      */

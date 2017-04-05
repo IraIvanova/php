@@ -7,10 +7,11 @@ my_shop_admin.product_add:
     defaults: { _controller: MyShopAdminBundle:Product:add }
 
 my_shop_admin.product_list:
-    path:   /product/list/{page}
-    defaults: { _controller: MyShopAdminBundle:Product:list, page: 1 }
+    path:   /product/list/{page}/{perPage}
+    defaults: { _controller: MyShopAdminBundle:Product:list, page: 1 , perPage: 9}
     requirements:
             page: \d+
+            perPage: \d+
 
 my_shop_admin.product_list_by_category:
     path:   /category/{id_category}/product/list
@@ -34,21 +35,26 @@ my_shop_admin.category_add:
     path:   /category/add/{idParent}
     defaults: { _controller: MyShopAdminBundle:Category:add, idParent:null }
 
-my_shop_admin.news_add:
-    path:   /news/add
-    defaults: { _controller: MyShopAdminBundle:News:addNews }
+my_shop_admin.manufacturer_add:
+    path:   /manufacturer/add
+    defaults: { _controller: MyShopAdminBundle:Manufacturer:add }
 
-my_shop_admin.news_edit:
-    path:   /news/{id}/edit
-    defaults: { _controller: MyShopAdminBundle:News:editNews }
+my_shop_admin.manufacturer_edit:
+    path:   /manufacturer/{id}/edit
+    defaults: { _controller: MyShopAdminBundle:Manufacturer:edit }
     requirements:
             id: \d+
 
-my_shop_admin.news_delete:
-    path:   /news/{id}/delete
-    defaults: { _controller: MyShopAdminBundle:News:deleteNews }
+my_shop_admin.manufacturer_delete:
+    path:   /manufacturer/{id}/delete
+    defaults: { _controller: MyShopAdminBundle:Manufacturer:delete }
     requirements:
             id: \d+
+
+myshop_admin.manufacturer_list:
+    path:   /manufacturer/list
+    defaults: { _controller: MyShopAdminBundle:Manufacturer:list }
+
 
 my_shop_admin.news_category_add:
     path:   /news/category/add
@@ -90,9 +96,6 @@ my_shop_admin.news_photo_delete:
     requirements:
                 id: \d+
 
-my_shop_admin.news_list:
-    path:   /news/list
-    defaults: { _controller: MyShopAdminBundle:News:list }
 
 my_shop_admin.product_photo_add:
     path:   /product/{idProduct}/photo/add
@@ -216,4 +219,18 @@ my_shop_admin.page_delete:
 
 myshop_admin.upload_image:
     path: /upload_image
-    defaults: {_controller: MyShopAdminBundle:Default:uploadImage }            
+    defaults: {_controller: MyShopAdminBundle:Default:uploadImage }
+
+my_shop_admin.info_add:
+    path: /info/add
+    defaults: {_controller: MyShopAdminBundle:InformationAboutShop:add }
+
+my_shop_admin.info_list:
+    path: /info/list
+    defaults: {_controller: MyShopAdminBundle:InformationAboutShop:list }
+
+my_shop_admin.info_edit:
+    path: /info/edit/{id}
+    defaults: {_controller: MyShopAdminBundle:InformationAboutShop:edit }
+
+

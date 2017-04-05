@@ -49,13 +49,7 @@ class Page
      */
     private $pageKey;
 
-    /**
-     *@var string
-     *
-     *@ORM\Column(name="hidden", type="boolean")
-     **/
-     private $hidden ;
-
+ 
 
 
     public function __construct()
@@ -64,29 +58,6 @@ class Page
     }
 
 
-     /**
-      * Get hidden
-      *
-     * @return boolean
-      */
-     public function getHidden()
-    {
-         return $this->hidden;
-     }
-
-
-     /**
-      * Set hidden
-      *
-      * @param boolean $hidden
-      * @return Page
-     */
-    public function setHidden($hidden)
-     {
-        $this->hidden =boolval($hidden);
-
-         return $this;
-     }
 
     /**
      * Get id

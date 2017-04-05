@@ -37,10 +37,18 @@ myshop.curl_client_json:
     requirements:
         idProduct: \d+
 
-myshop.page:
-    path: /{pageKey}
-    defaults: { _controller: MyShopDefaultBundle:Page:index }
+
 
 myshop.navigation:
     path: /navigation
     defaults: { _controller: MyShopDefaultBundle:Default:list }
+
+myshop.product_by_category:
+    path: /products/{idCategory}
+    defaults: {_controller: MyShopDefaultBundle:Default:showProductListByCategory }
+    requirements:
+             idCategory: \d+
+
+myshop.page:
+    path: /{pageKey}
+    defaults: { _controller: MyShopDefaultBundle:Page:index }

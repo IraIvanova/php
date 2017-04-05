@@ -11,6 +11,7 @@ namespace MyShop\AdminBundle\Storage;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\Pagination\PaginationInterface;
+use Knp\Component\Pager\PaginatorInterface;
 
 class ProductStorage
 {
@@ -21,11 +22,11 @@ class ProductStorage
     private $manager;
 
     /*
-     * @var PaginationInterface
+     * @var PaginatorInterface
      */
     private $pagination;
 
-    public function __construct(EntityManagerInterface $manager ,PaginationInterface $pagination   )
+    public function __construct(EntityManagerInterface $manager , PaginatorInterface $pagination   )
     {
         $this->manager = $manager;
         $this->pagination = $pagination;

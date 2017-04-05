@@ -42,6 +42,11 @@ class ProductType extends AbstractType
                     return '$childrenCategories->getName()';
                 }
                 } ])
+            ->add('manufacturer', EntityType::class, [
+                "class" => "MyShopDefaultBundle:Manufacturer",
+                "choice_label" => "name",
+                "label" => "Manufacturer"
+            ])
             ->add('iconFile', FileType::class, [
                 'mapped' => false,
                 'label' => 'Иконка к товару',

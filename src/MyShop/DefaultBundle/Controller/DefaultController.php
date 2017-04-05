@@ -80,20 +80,9 @@ class DefaultController extends Controller
     /**
      * @Template()
      */
-    public function showProductListAction($page)
+    public function showProductListAction($page = 1, $maxItemPerPage = 9)
     {
-        $query = $this->getDoctrine()
-            ->getManager()
-            ->createQuery("select p from MyShopDefaultBundle:Product p ");
-        $paginator  = $this->get('knp_paginator');
-
-        $productList = $paginator->paginate(
-            $query, /* query NOT result */
-            $page/*page number*/,
-            9/*limit per page*/
-        );
-
-       
+        $productList = $this->get("myshop_admin.product.storage")->getProductListPagination($page, $maxItemPerPage);
 
         return [
             "productList" => $productList
@@ -160,7 +149,7 @@ class DefaultController extends Controller
 
         $allCategories = $manager->createQuery("select cat from MyShopDefaultBundle:Category cat where cat.parentCategory is null")->getResult();
 
-   return $this->render(
+        return $this->render(
             'MyShopDefaultBundle:Default:list.html.twig',
             array("allCategories" => $allCategories)
         );
@@ -178,4 +167,18 @@ class DefaultController extends Controller
 
         return ["allCategories" => $allCategories];
     }
+
+    /**
+     * @Template()
+     */
+    public function showProductListByCategoryAction($idCategory)
+    {
+        $category = $this->getDoctrine()->getRepository("MyShopDefaultBundle:Category")->find($idCategory);
+        $productList = $category->getProductList();
+
+
+        return ["productList" => $productList];
+    }
+
+
 }

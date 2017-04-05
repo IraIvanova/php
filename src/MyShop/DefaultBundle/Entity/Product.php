@@ -92,6 +92,14 @@ class Product implements \JsonSerializable
      */
     private $mainPhotoFileName;
 
+    /**
+     * @var Manufacturer
+     *
+     * @ORM\ManyToOne(targetEntity="MyShop\DefaultBundle\Entity\Manufacturer", inversedBy="manufacturerList")
+     * @ORM\JoinColumn(name="id_manufacturer", referencedColumnName="id" )
+     */
+    private $manufacturer;
+
 
     public function jsonSerialize()
     {
@@ -108,6 +116,22 @@ class Product implements \JsonSerializable
         $this->setDateCreatedAt($date);
 
         $this->photos = new ArrayCollection();
+    }
+
+    /**
+     * @return Manufacturer
+     */
+    public function getManufacturer()
+    {
+        return $this->manufacturer;
+    }
+
+    /**
+     * @param Manufacturer $manufacturer
+     */
+    public function setManufacturer($manufacturer)
+    {
+        $this->manufacturer = $manufacturer;
     }
 
     /**
