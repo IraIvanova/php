@@ -2,10 +2,11 @@
 
 <div class="col-md-3 w3_footer_grid">
     <h3>Contact</h3>
-
+    {% for contact in contactList %}
     <ul class="address">
-        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>New York City.</span></li>
-        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-        <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
+        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>{{ contact.adress }}</li>
+        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">{{ contact.email }}</a></li>
+        <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>{{ contact.phoneNumber }}</li>
     </ul>
+    {% endfor %}
 </div>

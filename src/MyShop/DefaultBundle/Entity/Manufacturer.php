@@ -32,7 +32,7 @@ class Manufacturer
     /**
      * @var ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="MyShop\DefaultBundle\Entity\Manufacturer", mappedBy="manufacturer")
+     * @ORM\OneToMany(targetEntity="MyShop\DefaultBundle\Entity\Product", mappedBy="manufacturer")
      */
     private $manufacturerList;
 

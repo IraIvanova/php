@@ -55,48 +55,6 @@ myshop_admin.manufacturer_list:
     path:   /manufacturer/list
     defaults: { _controller: MyShopAdminBundle:Manufacturer:list }
 
-
-my_shop_admin.news_category_add:
-    path:   /news/category/add
-    defaults: { _controller: MyShopAdminBundle:NewsCategory:addNewsCategory }
-
-my_shop_admin.news_category_edit:
-    path:   /news/category/{id}/edit
-    defaults: { _controller: MyShopAdminBundle:NewsCategory:editNewsCategory }
-    requirements:
-            id: \d+
-
-my_shop_admin.news_category_delete:
-    path:   /news/category/{id}/delete
-    defaults: { _controller: MyShopAdminBundle:NewsCategory:deleteNewsCategory }
-    requirements:
-            id: \d+
-
-my_shop_admin.news_category_list:
-    path:   /news/category/list
-    defaults: { _controller: MyShopAdminBundle:NewsCategory:newsList }
-
-my_shop_admin.news_photo_add:
-    path:   /news/{idNews}/photo/add
-    defaults: { _controller: MyShopAdminBundle:NewsPhoto:add }
-
-my_shop_admin.news_photo_list:
-    path:   /news/{idNews}/photos/list
-    defaults: { _controller: MyShopAdminBundle:NewsPhoto:list }
-    requirements:
-            id: \d+
-
-my_shop_admin.news_photo_edit:
-    path:   /news/{idNews}/photo/edit
-    defaults: { _controller: MyShopAdminBundle:NewsPhoto:edit }
-
-my_shop_admin.news_photo_delete:
-    path:   /news/{id}/photo/delete
-    defaults: { _controller: MyShopAdminBundle:NewsPhoto:delete }
-    requirements:
-                id: \d+
-
-
 my_shop_admin.product_photo_add:
     path:   /product/{idProduct}/photo/add
     defaults: { _controller: MyShopAdminBundle:ProductPhoto:add }
@@ -121,11 +79,13 @@ my_shop_admin.product_photo_delete:
     requirements:
                 id: \d+
 
-my_shop_admin.product_icon_add:
-    path:   /product/{idProduct}/icon/add
-    defaults: { _controller: MyShopAdminBundle:Product:createIcon }
+my_shop_admin.product_delete_ajax:
+    path:   /product/{id}/delete/ajax
+    defaults: { _controller: MyShopAdminBundle:Product:deleteAjax }
     requirements:
-        idProduct: \d+
+         id: \d+
+    options:
+         expose: true
 
 my_shop_admin.category_list:
     path:   /category/list/{idParentCategory}
@@ -232,5 +192,34 @@ my_shop_admin.info_list:
 my_shop_admin.info_edit:
     path: /info/edit/{id}
     defaults: {_controller: MyShopAdminBundle:InformationAboutShop:edit }
+
+my_shop_admin.info_delete:
+    path: /info/{id}/delete
+    defaults: { _controller: MyShopAdminBundle:InformationAboutShop:delete }
+    requirements:
+            id: \d+
+
+my_shop_admin.comment_add:
+    path: /comment/add
+    defaults: {_controller: MyShopAdminBundle:Comments:add }
+
+my_shop_admin.comments_list:
+    path: /comment/list
+    defaults: {_controller: MyShopAdminBundle:Comments:list }
+
+my_shop_admin.comment_edit:
+    path: /comment/edit/{id}
+    defaults: {_controller: MyShopAdminBundle:Comments:edit }
+
+my_shop_admin.comment_delete:
+    path: /comment/{id}/delete
+    defaults: { _controller: MyShopAdminBundle:Comments:delete }
+    requirements:
+            id: \d+
+
+myshop_admin.ajaxrequest:
+     path: /test
+     defaults: {_controller: MyShopAdminBundle:Default:test }
+
 
 

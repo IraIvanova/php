@@ -121,7 +121,7 @@ $form = $this->createForm(CategoryType::class, $category);
 
 }
 
-public function deleteAction(Request $request,$id)
+public function deleteAction($id)
  {
 $category = $this->getDoctrine()->getRepository("MyShopDefaultBundle:Category")->find($id);
 $manager=$this->getDoctrine()->getManager();

@@ -11,6 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Validator\ConstraintViolationList;
@@ -114,9 +115,16 @@ class ProductController extends BaseController
         $manager->remove($product);
         $manager->flush();
 
-        $session = $this->get('session');
-        $session->set('notification', $this->get('session')->get('notification') . "product removed. ");
+//        $session = $this->get('session');
+//        $session->set('notification', $this->get('session')->get('notification') . "product removed. ");
         return $this->redirectToRoute("my_shop_admin.product_list");
+    }
+    
+    public function deleteAjaxAction($id)
+    {
+        $this->deleteAction($id);
+        $responseJson = new JsonResponse(["message"=>"Product deleted!"]);
+        return $responseJson;
     }
 
 

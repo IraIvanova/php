@@ -1,0 +1,8 @@
+{% extends "@MyShopDefaultBundle:Default:showProduct.html.twig" %}
+
+{% block comment  %}
+<form method="post" action="{{ path('myshop.comment_add') }}" >
+    {{ form_widget(form) }}
+    <input type="submit" />
+</form>
+{%  endblock %}

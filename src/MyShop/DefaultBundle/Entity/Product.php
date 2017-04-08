@@ -96,11 +96,27 @@ class Product implements \JsonSerializable
      * @var Manufacturer
      *
      * @ORM\ManyToOne(targetEntity="MyShop\DefaultBundle\Entity\Manufacturer", inversedBy="manufacturerList")
-     * @ORM\JoinColumn(name="id_manufacturer", referencedColumnName="id" )
+     * @ORM\JoinColumn(name="id_manufacturer", referencedColumnName="id" , onDelete="CASCADE")
      */
     private $manufacturer;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="new_offer", type="boolean")
+     */
+    private $newOffer;
 
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="MyShop\DefaultBundle\Entity\Comments", mappedBy="product")
+     *
+     */
+    private $comments;
+
+
+ 
     public function jsonSerialize()
     {
         return[
@@ -110,12 +126,44 @@ class Product implements \JsonSerializable
         ];
     }
 
+    /**
+     * @return ArrayCollection
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+
+    /**
+     * @param ArrayCollection $comments
+     */
+    public function setComments($comments)
+    {
+        $this->comments = $comments;
+    }
+
     public function __construct()
     {
         $date = new \DateTime("now");
         $this->setDateCreatedAt($date);
 
         $this->photos = new ArrayCollection();
+    }
+
+    /**
+     * @return string
+     */
+    public function getNewOffer()
+    {
+        return $this->newOffer;
+    }
+
+    /**
+     * @param string $newOffer
+     */
+    public function setNewOffer($newOffer)
+    {
+        $this->newOffer = $newOffer;
     }
 
     /**

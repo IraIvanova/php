@@ -28,11 +28,14 @@ class InformationAboutShopController extends Controller
 
             if ($form->isSubmitted())
             {
+                $info->setAdress("City, street");
+                $info->setEmail("email@gmail.com");
+                $info->setPhoneNumber("+38(0482)123456");
                 $manager = $this->getDoctrine()->getManager();
                 $manager->persist($info);
                 $manager->flush();
 
-                return $this->redirectToRoute("myshop.product_list");
+                return $this->redirectToRoute("my_shop_admin.info_list");
             }
         }
 
@@ -71,7 +74,7 @@ class InformationAboutShopController extends Controller
                 $manager->persist($info);
                 $manager->flush();
 
-                return $this->redirectToRoute("my_shop_admin.index");
+                return $this->redirectToRoute("my_shop_admin.info_list");
             }
         }
 
@@ -80,6 +83,17 @@ class InformationAboutShopController extends Controller
             "form" => $form->createView(),
             "info" => $info
         ];
+    }
+
+    public function deleteAction($id)
+    {
+        $info= $this->getDoctrine()->getRepository("MyShopAdminBundle:InformationAboutShop")->find($id);
+
+        $manager = $this->getDoctrine()->getManager();
+        $manager->remove($info);
+        $manager->flush();
+
+        return $this->redirectToRoute("my_shop_admin.info_list");
     }
 }
 

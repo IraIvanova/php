@@ -88,17 +88,22 @@ knp_paginator:
         pagination: 'MyShopAdminBundle::pagination.html.twig'     # sliding pagination controls template
         sortable: 'KnpPaginatorBundle:Pagination:sortable_link.html.twig' # sort link template
 
-knp_menu:
-    # use "twig: false" to disable the Twig extension and the TwigRenderer
-    twig:
-        template: KnpMenuBundle::menu.html.twig
-    #  if true, enables the helper for PHP templates
-    templating: false
-    # the renderer to use, list is also available by default
-    default_renderer: twig
-
-white_october_breadcrumbs: ~
-
-
-      
-
+fos_elastica:
+    clients:
+            default: { host: localhost, port: 8000 }
+    indexes:
+        app:
+          types:
+              product:
+                    properties:
+                       model: ~
+                       price: ~
+                       category: ~
+                    persistence:
+                       # the driver can be orm, mongodb, phpcr or propel
+                       # listener and finder are not supported by
+                       # propel and should be removed
+                       driver: orm
+                       model: MyShop\DefaultBundle\Entity\Product
+                       provider: ~
+                       finder: ~

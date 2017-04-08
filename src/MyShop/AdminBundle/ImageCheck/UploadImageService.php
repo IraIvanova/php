@@ -121,4 +121,30 @@ class UploadImageService
         $img->save($photoDirPath . $mainPhotoFileName );
         return $mainPhotoFileName ;
     }
+
+    public function uploadManufacturerIcon(UploadedFile $uploadedFile,  $iconFileName = null)
+    {
+        $imageNameGenerator = $this->generateName;
+        $checkImg = $this->checkImg;
+        if ($iconFileName == null) {
+            $iconFileName = "manufacturer_" . $imageNameGenerator->genName() . "." . $uploadedFile->getClientOriginalExtension();
+        }
+        $iconDirPath = $this->uploadImageRootDir . "../" . "photos/";
+        try {
+            $checkImg->check($uploadedFile);
+        } catch (\InvalidArgumentException $ex) {
+            die("Image type error!");
+        }
+        try {
+            $uploadedFile->move($iconDirPath, $iconFileName);
+        } catch (\Exception $exception) {
+            echo "Can not move file!";
+            throw $exception;
+        }
+//        $img = new ImageResize($iconDirPath . $iconFileName);
+//        $img->resizeToBestFit(120, 120);
+//        $img->save($iconDirPath . $iconFileName);
+        return $iconFileName;
+    }
+
 }

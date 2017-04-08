@@ -1,10 +1,20 @@
 {% extends "@MyShopDefault/layout.html.twig" %}
 {% block body %}
 
-
+    <!-- breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+                <li><a href="{{ path("myshop.product_list")}}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+                <li class="active"></li>
+            </ol>
+        </div>
+    </div>
+    <!-- //breadcrumbs -->
     <!--- products --->
     <div class="products">
     <div class="container">
+
     <div class="col-md-4 products-left">
         <div class="categories">
             <ul class="cate">
@@ -14,8 +24,11 @@
     </div>
     <div class="col-md-8 products-right">
     <div class="products-right-grid">
+
         <div class="products-right-grids">
+
             <div class="sorting">
+
                 {#<div class="ref_sorting">#}
                 {#<h4>Sort by:</h4>#}
                 {#<a href="{{ path("myshop.product_list")}}">{{ knp_pagination_sortable(productList, 'Price | ', 'p.price') }}</a>#}
@@ -63,7 +76,7 @@
                             <div class="snipcart-thumb">
                                 <a href="{{ path("my_shop.product_info", {id:product.getId()}) }}"><img title=" " alt=" " src="/photos/{{ product.getIconFileName() }}"></a>
                                 <p>{{ product.getModel() }}</p>
-                                <h4>{{ product.getPrice() }} <span>$45.00</span></h4>
+                                <h4>{{ product.price| currency}} <span>$45.00</span></h4>
                             </div>
                             <div class="snipcart-details top_brand_home_details">
                                 <form action="#" method="post">

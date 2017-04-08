@@ -9,17 +9,20 @@ class Extension extends \Twig_Extension
     public function getFilters()
     {
         return 
-        [  new \Twig_SimpleFilter("greetings", [$this, "showGreetings"])];
+        [  new \Twig_SimpleFilter("currency", [$this, "showCurrency"])];
     }
 
-    public function showGreetings($data)
+    public function showCurrency($data)
     {
-        $result= "Welcome, dear friend ". $data ;
+        $result= $data . "$" ;
         return $result;
             }
 
      public function getName()
      {
-         return "greeting_extension";
-     }       
+         return "currency_extension";
+     }
+
+    
+    
 }

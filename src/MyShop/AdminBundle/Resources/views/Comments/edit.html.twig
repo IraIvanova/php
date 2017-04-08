@@ -2,7 +2,7 @@
 
 {% block body %}
 <h3>Редактирование </h3>
-<form method="post" action="{{ path('my_shop_admin.manufacturer_edit', {id:manufacturer.id}) }}">
+<form method="post" action="{{ path('my_shop_admin.info_edit', {id:info.id}) }}">
 {{ form_widget(form) }}
     <input type="submit" />
 </form>

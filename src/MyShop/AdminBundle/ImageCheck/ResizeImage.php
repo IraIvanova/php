@@ -37,6 +37,18 @@ class ResizeImage
 
         return $mediumFileName;
     }
+    
+    public  function uploadManufacturerImg($photoDirPath, $photoFileName)
+    {
+        $image = new ImageResize($photoDirPath . $photoFileName);
+        $height= $this->imageSizeList[3][1];
+        $width = $this->imageSizeList[3][0];
+        $image->resizeToBestFit($height, $width);
+        $manufacturerFileName = "manufacturer_" . $photoFileName;
+        $image->save($photoDirPath. $manufacturerFileName);
+
+        return $manufacturerFileName;
+    }
 
 
 

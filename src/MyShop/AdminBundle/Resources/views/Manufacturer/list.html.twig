@@ -2,11 +2,35 @@
 
 {% block body %}
 
-{% for category in categoryList %}
- <a href ="">{{ category.getName()}}</a><br>
+    <a href="{{ path("my_shop_admin.manufacturer_add") }}">Add manufacturer</a>
 
 
-{% endfor %}
 
+
+    <table border="1">
+        <tr>
+            <td>Manufacturer</td>
+            <td>Icon</td>
+            <td>edit/delete</td>
+        </tr>
+        {% for message in app.session.flashBag.get("success") %}
+            <div>
+                {{ message }}
+            </div>
+        {% endfor %}
+        {% for category in categoryList %}
+
+
+            <tr>
+                <td><p>{{ category.getName() }}</p></td>
+                <td><img src="/photos/{{ category.iconFileName }}" width="126px" height="60px"></td>
+                <td><p><a href="{{ path("my_shop_admin.manufacturer_edit", {id:category.id}) }}">Edit</a>
+                        <a href="{{ path("my_shop_admin.manufacturer_delete", {id:category.id}) }}">Delete</a>
+                    </p>
+                </td>
+            </tr>
+
+        {% endfor %}
+    </table>
 
 {% endblock %}

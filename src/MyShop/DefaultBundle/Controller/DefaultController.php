@@ -3,7 +3,9 @@
 namespace MyShop\DefaultBundle\Controller;
 
 use GuzzleHttp\Client;
+use MyShop\DefaultBundle\Entity\Comments;
 use MyShop\DefaultBundle\Entity\Product;
+use MyShop\DefaultBundle\Form\CommentsType;
 use MyShop\DefaultBundle\Form\ProductType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -91,38 +93,6 @@ class DefaultController extends Controller
     }
 
 
-    /**
-     * @Template()
-     */
-    public function showNewsAction(Request $request, $id)
-    {
-        $doctrine = $this->getDoctrine();
-        $manager = $doctrine->getManager();
-
-        $repository = $manager->getRepository("MyShopDefaultBundle:News");
-        $news = $repository->find($id);
-
-
-        return [
-            "news" => $news
-        ];
-    }
-
-    /**
-     * @Template()
-     */
-    public function showNewsListAction()
-    {
-        $manager = $this->getDoctrine()->getManager();
-
-        $newsList = $manager->getRepository("MyShopDefaultBundle:News")->findAll();
-
-
-        return [
-            "newsList" => $newsList,
-
-        ];
-    }
 
     public function clientCurlAction($idProduct)
     {
@@ -180,5 +150,66 @@ class DefaultController extends Controller
         return ["productList" => $productList];
     }
 
+    public function showBrandsAction()
+    {
+        $manager = $this->getDoctrine()->getManager();
 
+        $manufacturerList = $manager->getRepository("MyShopDefaultBundle:Manufacturer")->findAll();
+
+
+        return $this->render(
+            'MyShopDefaultBundle:Default:showBrands.html.twig',
+            array("manufacturerList" => $manufacturerList)
+        );
+
+    }
+
+    public function infoContactAction()
+    {
+        $contactList = $this->getDoctrine()->getRepository("MyShopAdminBundle:InformationAboutShop")->findAll();
+
+        return $this->render(
+            'MyShopDefaultBundle:Default:infoAboutShop.html.twig',
+            array("contactList" => $contactList)
+        );
+    }
+
+    public function newOfferAction()
+    {
+        $productList = $this->getDoctrine()->getRepository('MyShopDefaultBundle:Product')->findBy(['newOffer' => true]);
+
+        return $this->render(
+            'MyShopDefaultBundle:Default:newOffer.html.twig',
+            array('productList' => $productList)
+        );
+
+    }
+
+    /**
+     * @Template()
+     */
+    public function commentsAction(Request $request)
+    {
+
+        $comments = new Comments();
+        $form = $this->createForm(CommentsType::class, $comments);
+
+        {
+            $form->handleRequest($request);
+
+            if ($form->isSubmitted())
+            {
+                $manager = $this->getDoctrine()->getManager();
+                $manager->persist($comments);
+                $manager->flush();
+
+                return $this->redirectToRoute("my_shop.product_info");
+            }
+        }
+
+
+        return [
+            "form" => $form->createView()
+        ];
+    }
 }

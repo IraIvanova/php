@@ -1,5 +1,17 @@
 {% extends "@MyShopAdmin/layout.html.twig" %}
 
+{% block head_js %}
+    <script type="application/javascript" src="{{ asset('bundles/myshopadmin/jquery-3.2.0.min.js') }}"></script>
+    <script type="application/javascript">
+
+        function del(id) {
+            var url = Routing.generate('my_shop_admin.product_delete_ajax', {"id":id } );
+            $.get(url, function (data) {
+                alert(data);
+            });
+        }
+    </script>
+    {% endblock %}
 {% block body %}
 <a href="{{ path("my_shop_admin.product_add") }}">Добавить товар</a>
     <table border="1">
@@ -21,6 +33,7 @@
             <td> <p> {{product.price}}</p></td>
 
         <td>
+            <a href="#" onclick="del( {{ product.id }})">Удалить ajax</a><br/>
             <a href="{{ path("my_shop_admin.product_delete", {id:product.id}) }}">Удалить</a><br/>
             <a href="{{ path("my_shop_admin.product_edit", {id:product.id}) }}">Редактирование</a><br>
             <a href="{{ path("my_shop_admin.product_photo_list", {idProduct:product.getId()}) }}">Управление картинками</a>

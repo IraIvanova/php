@@ -5,6 +5,7 @@ namespace MyShop\AdminBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -83,6 +84,18 @@ class DefaultController extends Controller
 
  return ["newArr"=> $newArr];*/
 }
+    public function testAction(Request $request)
+    {
+        if($request->isXmlHttpRequest()) {
+            $response = new JsonResponse([
+                "name" => 'Ira',
+                "time" => time()
+            ]);
 
+            return $response;
+        }
+        return new Response("you are not Ajax!");
+        
+    }
 
 }

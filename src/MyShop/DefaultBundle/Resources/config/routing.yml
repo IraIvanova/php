@@ -1,3 +1,21 @@
+myshop.comment_add:
+    path: /comment/add
+    defaults: {_controller: MyShopDefaultBundle:Default:comments }
+
+myshop.comments_list:
+    path: /comment/list
+    defaults: {_controller: MyShopDefaultBundle:Comments:list }
+
+myshop.comment_edit:
+    path: /comment/edit/{id}
+    defaults: {_controller: MyShopDefaultBundle:Comments:edit }
+
+myshop.comment_delete:
+    path: /comment/{id}/delete
+    defaults: { _controller: MyShopDefaultBundle:Comments:delete }
+    requirements:
+            id: \d+
+
 my_shop.product_info:
     path: /product/{id}
     defaults: { _controller: MyShopDefaultBundle:Default:showProduct }
@@ -37,7 +55,9 @@ myshop.curl_client_json:
     requirements:
         idProduct: \d+
 
-
+myshop.show_b:
+    path: /navigation
+    defaults: { _controller: MyShopDefaultBundle:Default:list }
 
 myshop.navigation:
     path: /navigation

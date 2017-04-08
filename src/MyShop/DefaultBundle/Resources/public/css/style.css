@@ -1372,7 +1372,7 @@ ul.faq {
     text-transform: uppercase;
     color: #39c;
 	background: #fff;
-    padding: 16px;
+    /*padding: 16px;*/
 	display: block;
 	 border: 1px solid #e1e1e1;
 }

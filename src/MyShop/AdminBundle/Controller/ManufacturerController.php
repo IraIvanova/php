@@ -43,13 +43,12 @@ class ManufacturerController extends Controller
 
 
 
-                    $filesArray = $request->files->get("myshop_defaultbundle_manufacturer");
-                    var_dump($filesArray);
-                    die();
+                    $filesAr = $request->files->get("myshop_defaultbundle_manufacturer");
+
 
                     /** @var UploadedFile $iconFile */
 
-                    $iconFile = $filesAr["iconFile"];
+                    $iconFile = $filesAr["iconFileName"];
 
 
                     $iconFileName = $this->get("myshop_admin.image_uploader")->uploadIcon($iconFile);
@@ -78,19 +77,23 @@ class ManufacturerController extends Controller
         $manufacturer= $this->getDoctrine()->getRepository("MyShopDefaultBundle:Manufacturer")->find($id);
         $form= $this->createForm(ManufacturerType::class, $manufacturer);
 
-        if($form->isSubmitted())
-        {
-            $manager= $this->getDoctrine()->getManager();
-            $manager->persist($manufacturer);
-            $manager->flush();
+        if ($request->isMethod("POST")) {
+            $form->handleRequest($request);
 
-            return $this->redirectToRoute("myshop_admin.manufacturer_list");
+            if ($form->isSubmitted()) {
+                $manager = $this->getDoctrine()->getManager();
+                $manager->persist($manufacturer);
+                $manager->flush();
+
+                return $this->redirectToRoute("myshop_admin.manufacturer_list");
+            }
         }
         return [
             "form"=> $form->createView(),
             "manufacturer"=> $manufacturer
         ];
     }
+
 
     public function deleteAction($id)
     {

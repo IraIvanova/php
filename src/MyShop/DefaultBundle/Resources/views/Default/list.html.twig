@@ -29,9 +29,9 @@
                     <ul class="multi-column-dropdown">
 
                         {% for child in category.ChildrenCategories %}
-                        <li><a href="#">{{ child.name }}</a></li>
+                        <li><a href="http://localhost:8000/products/{{ child.id }}">{{ child.name }}</a></li>
 
-{% endfor %}
+                           {% endfor %}
                         <hr>
                         <li><a href="{{ path("myshop.product_list") }}">Все категории >></a></li>
                         {% endif %}

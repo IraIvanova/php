@@ -3,25 +3,20 @@
 namespace MyShop\DefaultBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ManufacturerType extends AbstractType
+class CommentsType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder
-            ->add('name')
-            ->add('iconFileName', FileType::class, [
-                'mapped' => false,
-                'label' => 'Иконка производителя',
-                'required' => false
-            ])
-        ;
+        $builder->add('content')
+            ->add('author')
+            ->add('dateCreated')
+          ;
     }
     
     /**
@@ -30,7 +25,7 @@ class ManufacturerType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'MyShop\DefaultBundle\Entity\Manufacturer'
+            'data_class' => 'MyShop\DefaultBundle\Entity\Comments'
         ));
     }
 
@@ -39,7 +34,7 @@ class ManufacturerType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'myshop_defaultbundle_manufacturer';
+        return 'myshop_defaultbundle_comments';
     }
 
 
