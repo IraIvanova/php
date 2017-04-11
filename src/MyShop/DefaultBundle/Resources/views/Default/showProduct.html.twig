@@ -62,7 +62,7 @@
                                     <input type="hidden" name="currency_code" value="USD">
                                     <input type="hidden" name="return" value=" ">
                                     <input type="hidden" name="cancel_return" value=" ">
-                                    <input type="submit" name="submit" value="Добавить в корзину    " class="button">
+                                    <a href="{{ path('myshop.add_to_basket') }}"><input type="submit" name="submit" value="Добавить в корзину" class="button"></a>
                                 </fieldset>
                             </form>
                         </div>
@@ -75,13 +75,13 @@
         </div>
         <div class="comments agileinfo_single_right" style="background-color: #f5f5f5" >
            <h3> Comments:</h3>
-            <div class="username">
-            <p>Username</p>
-            </div>
-            <div class="user-comment">
 
-                <p>vfmjgvjhgmjhmnbm</p>
-            </div>
+            {#{{ render(controller('MyShopDefaultBundle:Default:commentList')) }}#}
+
+            <form method="post" action="{{ path('my_shop.product_info', {id:product.id} ) }}" >
+                {{ form_widget(form) }}
+                <input type="submit" />
+            </form>
 
              <div class="dateCreated"></div>
 

@@ -1,3 +1,7 @@
+my_shop_default_customer_order:
+    resource: "@MyShopDefaultBundle/Controller/CustomerOrderController.php"
+    type:     annotation
+
 my_shop_admin:
     resource: "@MyShopAdminBundle/Resources/config/routing.yml"
     prefix:   /admin

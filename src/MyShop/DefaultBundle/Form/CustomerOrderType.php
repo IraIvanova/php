@@ -6,14 +6,14 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class NewsType extends AbstractType
+class CustomerOrderType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('title')->add('shortDescription')->add('content')->add('datePublished')        ;
+        $builder->add('dateCreated')->add('status')->add('phoneNumber')->add('customer')        ;
     }
     
     /**
@@ -22,7 +22,7 @@ class NewsType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'MyShop\DefaultBundle\Entity\News'
+            'data_class' => 'MyShop\DefaultBundle\Entity\CustomerOrder'
         ));
     }
 
@@ -31,7 +31,7 @@ class NewsType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'myshop_defaultbundle_news';
+        return 'myshop_defaultbundle_customerorder';
     }
 
 

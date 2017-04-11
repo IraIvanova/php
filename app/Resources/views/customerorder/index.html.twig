@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Customerorders list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Datecreated</th>
+                <th>Status</th>
+                <th>Phonenumber</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for customerOrder in customerOrders %}
+            <tr>
+                <td><a href="{{ path('customerorder_show', { 'id': customerOrder.id }) }}">{{ customerOrder.id }}</a></td>
+                <td>{% if customerOrder.dateCreated %}{{ customerOrder.dateCreated|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ customerOrder.status }}</td>
+                <td>{{ customerOrder.phoneNumber }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('customerorder_show', { 'id': customerOrder.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

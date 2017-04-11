@@ -51,6 +51,13 @@ class Comments
      */
     private $product;
 
+    public function __construct()
+    {
+        $date = new \DateTime("now");
+        $this->setDateCreated($date);
+
+    }
+
     /**
      * @return Product
      */

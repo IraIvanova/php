@@ -46,14 +46,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div class="agile-login">
             <ul>
-                <li><a href="#"> Создать аккаунт </a></li>
-                <li><a href="#">Войти</a></li>
+                <li><a href="{{ path('myshop.customer_registration') }}"> Создать аккаунт </a></li>
+                <li><a href="{{ path('login_customer') }}">Войти</a></li>
                 <li><a href="#">Помощь</a></li>
 
             </ul>
         </div>
         <div class="product_list_header">
-            <form action="#" method="post" class="last">
+            <form action="{{ path('myshop.add_to_basket') }}" method="post" class="last">
                 <input type="hidden" name="cmd" value="_cart">
                 <input type="hidden" name="display" value="1">
                 <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>

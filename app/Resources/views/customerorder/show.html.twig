@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Customerorder</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ customerOrder.id }}</td>
+            </tr>
+            <tr>
+                <th>Datecreated</th>
+                <td>{% if customerOrder.dateCreated %}{{ customerOrder.dateCreated|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ customerOrder.status }}</td>
+            </tr>
+            <tr>
+                <th>Phonenumber</th>
+                <td>{{ customerOrder.phoneNumber }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('customerorder_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

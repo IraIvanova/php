@@ -72,11 +72,40 @@ class DefaultController extends Controller
 
         $photo = $product->getPhotos();
 
+        $comments = new Comments();
+        $form = $this->createForm(CommentsType::class, $comments);
+
+        {
+            $form->handleRequest($request);
+
+            if ($form->isSubmitted())
+            {
+             
+                $comments->setProduct($product);
+                $manager = $this->getDoctrine()->getManager();
+                $manager->persist($comments);
+                $manager->flush();
+
+
+            }
+        }
 
         return [
             "product" => $product,
-            "photo" => $photo
+            "photo" => $photo,
+            "form" => $form->createView()
         ];
+    }
+
+   
+    public function commentListAction()
+    {
+
+        $comments = $this->getDoctrine()->getRepository("MyShopDefaultBundle:Comments")->findBy(['']);
+        $commentList = $comments->getProduct();
+
+        return ["commentList" => $commentList];
+
     }
 
     /**
@@ -188,28 +217,34 @@ class DefaultController extends Controller
     /**
      * @Template()
      */
-    public function commentsAction(Request $request)
-    {
-
-        $comments = new Comments();
-        $form = $this->createForm(CommentsType::class, $comments);
-
-        {
-            $form->handleRequest($request);
-
-            if ($form->isSubmitted())
-            {
-                $manager = $this->getDoctrine()->getManager();
-                $manager->persist($comments);
-                $manager->flush();
-
-                return $this->redirectToRoute("my_shop.product_info");
-            }
-        }
-
-
-        return [
-            "form" => $form->createView()
-        ];
-    }
+//    public function commentsAction(Request $request)
+//    {
+//
+//        $comments = new Comments();
+//        $form = $this->createForm(CommentsType::class, $comments);
+//
+//        {
+//            $form->handleRequest($request);
+//
+//            if ($form->isSubmitted())
+//            {
+//                $manager = $this->getDoctrine()->getManager();
+//                $manager->persist($comments);
+//                $manager->flush();
+//
+//
+//                return $this->redirectToRoute("myshop.comment_add");
+//            }
+//        }
+//
+//        return $this->render(
+//            'MyShopDefaultBundle:Default:comments.html.twig',
+//            array('comments' => $comments,
+//                "form" => $form->createView()
+//                )
+//        );
+////        return [
+////            "form" => $form->createView()
+////        ];
+//    }
 }

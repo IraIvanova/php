@@ -19,7 +19,6 @@ myshop.comment_delete:
 my_shop.product_info:
     path: /product/{id}
     defaults: { _controller: MyShopDefaultBundle:Default:showProduct }
-    methods: [GET]
     requirements:
         id: \d+
 
@@ -68,6 +67,25 @@ myshop.product_by_category:
     defaults: {_controller: MyShopDefaultBundle:Default:showProductListByCategory }
     requirements:
              idCategory: \d+
+
+myshop.customer_registration:
+    path: /customer/registration
+    defaults: { _controller: MyShopDefaultBundle:Customer:registration }
+
+logout_customer:
+    path: /customer/logout
+
+login_customer:
+    path: /customer/login
+    defaults: { _controller: MyShopDefaultBundle:Customer:login }
+
+myshop.basket:
+    path: /basket
+    defaults: { _controller: MyShopDefaultBundle:Basket:index }
+
+myshop.add_to_basket:
+    path: /add/basket
+    defaults: { _controller: MyShopDefaultBundle:Basket:addToBasket }
 
 myshop.page:
     path: /{pageKey}
