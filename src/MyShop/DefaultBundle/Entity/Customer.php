@@ -26,7 +26,7 @@ class Customer implements UserInterface, \Serializable
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=255, unique=true)
+     * @ORM\Column(name="email", type="string", length=255)
      */
     private $email;
 
@@ -50,7 +50,7 @@ class Customer implements UserInterface, \Serializable
     /**
      * @var ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="MyShop\DefaultBundle\Entity\CustomerOrder", mappedBy="customer", cascade={"persist"})
+     * @ORM\OneToMany(targetEntity="MyShop\DefaultBundle\Entity\CustomerOrder", mappedBy="customer", cascade={"all"})
      */
     
     private $orders;
@@ -194,12 +194,12 @@ class Customer implements UserInterface, \Serializable
 
     public function getSalt()
     {
-        // TODO: Implement getSalt() method.
+        return "";
     }
 
     public function getUsername()
     {
-        // TODO: Implement getUsername() method.
+        return $this->email;
     }
 
     public function eraseCredentials()
@@ -209,7 +209,7 @@ class Customer implements UserInterface, \Serializable
 
     public function unserialize($serialized)
     {
-        // TODO: Implement unserialize() method.
+         list($this->id, $this->email, $this->password) = unserialize($serialized);
     }
 
     /**
@@ -235,4 +235,12 @@ class Customer implements UserInterface, \Serializable
     {
         $this->orders->removeElement($order);
     }
+
+
+    public function __toString()
+    {
+        return $this->email;
+    }
+
+
 }

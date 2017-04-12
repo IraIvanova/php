@@ -1,6 +1,7 @@
 <?php
 
 namespace MyShop\DefaultBundle\Repository;
+
 use MyShop\DefaultBundle\Entity\Customer;
 use MyShop\DefaultBundle\Entity\CustomerOrder;
 

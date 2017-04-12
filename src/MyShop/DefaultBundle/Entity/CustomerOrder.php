@@ -5,9 +5,6 @@ namespace MyShop\DefaultBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
-const STATUS_OPEN = 1;
-const STATUS_CLOSE = 2;
-const STATUS_REJECT = 3;
 
 /**
  * CustomerOrder
@@ -17,6 +14,10 @@ const STATUS_REJECT = 3;
  */
 class CustomerOrder
 {
+    const STATUS_OPEN = 1;
+    const STATUS_CLOSE = 2;
+    const STATUS_REJECT = 3;
+
     /**
      * @var int
      *

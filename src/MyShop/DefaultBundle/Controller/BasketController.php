@@ -10,7 +10,7 @@ namespace MyShop\DefaultBundle\Controller;
 
 
 
-use MyShop\DefaultBundle\Entity\CustomerOrder;
+use MyShop\DefaultBundle\Entity\Product;
 use MyShop\DefaultBundle\Entity\OrderProduct;
 use MyShop\DefaultBundle\Form\CommentsType;
 use MyShop\DefaultBundle\Form\CustomerOrderType;
