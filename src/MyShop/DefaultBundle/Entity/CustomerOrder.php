@@ -15,9 +15,12 @@ use Doctrine\ORM\Mapping as ORM;
 class CustomerOrder
 {
     const STATUS_OPEN = 1;
-    const STATUS_CLOSE = 2;
+    const STATUS_DONE = 2;
     const STATUS_REJECT = 3;
 
+    const DELIVERY_NOVAYA_POSHTA = 1;
+    const DELIVERY_SELF = 2;
+    
     /**
      * @var int
      *
@@ -44,9 +47,10 @@ class CustomerOrder
     /**
      * @var string
      *
-     * @ORM\Column(name="phoneNumber", type="string", length=255)
+     * @ORM\Column(name="phone_number", type="string", length=255, nullable=true)
      */
     private $phoneNumber;
+
 
     /**
      * @var Customer
@@ -55,6 +59,20 @@ class CustomerOrder
      * @ORM\JoinColumn(name="id_customer", referencedColumnName="id" )
      */
     private $customer;
+    
+        /**
+     * @var int
+     * 
+     * @ORM\Column(name="delivery", type="integer")
+     */
+    private $delivery;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adress", type="string", length=255, nullable=true )
+     */
+    private $adress;
 
     /**
      * @var ArrayCollection
@@ -63,14 +81,93 @@ class CustomerOrder
      */
     private $products;
 
+    /**
+     * * @var string
+     *
+     * @ORM\Column(name="comment", type="text", nullable=true)
+     */
+    private $comment;
+
+    /**
+     * @return string
+     */
+    public function getComment()
+    {
+        return $this->comment;
+    }
+
+    /**
+     * @param string $comment
+     */
+    public function setComment($comment)
+    {
+        $this->comment = $comment;
+    }
+
 
     public function __construct()
     {
         $this->setDateCreated(new \DateTime("now"));
-
+        $this->setStatus(self::STATUS_OPEN);
         $this->products = new ArrayCollection();
+        $this->setDelivery(self::DELIVERY_NOVAYA_POSHTA);
+  
     }
 
+    /**
+     * @return mixed
+     */
+    public function getDelivery()
+    {
+        return $this->delivery;
+    }
+
+    /**
+     * @param mixed $delivery
+     */
+    public function setDelivery($delivery)
+    {
+        $this->delivery = $delivery;
+    }
+
+
+    public function getTotalPrice()
+    {
+        $sum = 0;
+        
+        /**@var OrderProduct $product*/
+        foreach ($this->products as $product)
+        {
+            $sum += $product->getPrice() * $product->getCount();
+        }
+        return $sum;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAdress()
+    {
+        return $this->adress;
+    }
+
+    /**
+     * @param string $adress
+     */
+    public function setAdress($adress)
+    {
+        $this->adress = $adress;
+    }
+    public function getAllProductPrice()
+    {
+        $sum = 0;
+        /**@var CustomerOrder $products*/
+        foreach($this->products as $product){
+            $sum += $product->getTotalPrice();
+        }
+        return $sum;
+    }
+    
     /**
      * @return mixed
      */
@@ -185,4 +282,28 @@ class CustomerOrder
     {
         return $this->phoneNumber;
     }
+    /**
+     * Add product
+     *
+     * @param \MyShop\DefaultBundle\Entity\OrderProduct $product
+     *
+     * @return CustomerOrder
+     */
+    public function addProduct(\MyShop\DefaultBundle\Entity\OrderProduct $product)
+    {
+        $product->setOrder($this);
+        $this->products[] = $product;
+        return $this;
+    }
+    /**
+     * Remove product
+     *
+     * @param \MyShop\DefaultBundle\Entity\OrderProduct $product
+     */
+    public function removeProduct(\MyShop\DefaultBundle\Entity\OrderProduct $product)
+    {
+        $this->products->removeElement($product);
+    }
+
+
 }

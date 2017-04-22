@@ -30,7 +30,7 @@ class CustomerOrderRepository extends \Doctrine\ORM\EntityRepository
 
             $order = new CustomerOrder();
             $customer->addOrder($order);
-            $manager->persist($order);
+            $manager->persist($customer);
             $manager->flush();
         }
         

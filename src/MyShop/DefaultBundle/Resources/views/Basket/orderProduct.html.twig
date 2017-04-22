@@ -1,0 +1,44 @@
+{% extends "@MyShopDefault/layout.html.twig" %}
+{% block body %}
+
+    <div class="container">
+<a href="{{ path("myshop.history_order") }}">Back to orders list >></a>
+<h2> Product in order</h2>
+    <div class="checkout">
+        <div class="container">
+            <div class="checkout-right">
+                <table class="timetable_sub">
+                    <thead>
+                    <tr>
+
+
+                        <th>Model</th>
+                        <th>Count</th>
+                        <th>Price</th>
+                        <th>Total price</th>
+
+                    </tr>
+                    </thead>
+                    {% for product in order.products %}
+                        <tr class="rem1">
+                           {%  if product.idProduct is not null %}
+                            <td class="invert"><a href="{{ path ("my_shop.product_info", {id:product.idProduct}) }}">{{ product.getModel() }}</a></td>
+                            {%  else %}
+                                <td class="invert">{{ product.getModel() }}</td>
+                                {%  endif %}
+                               {#<td class="invert-image"><a href="single.html">{{ product.model }}</a></td>#}
+                            <td class="invert">{{ product.count }}</td>
+
+                            <td class="invert">{{ product.price }}</td>
+                            <td class="invert">{{ product.getTotalPrice() }}</td>
+
+                        </tr>
+                    {% endfor %}
+                </table>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

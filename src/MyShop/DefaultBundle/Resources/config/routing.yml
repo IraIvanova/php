@@ -84,8 +84,34 @@ myshop.basket:
     defaults: { _controller: MyShopDefaultBundle:Basket:index }
 
 myshop.add_to_basket:
-    path: /add/basket
+    path: /basket/product/{idProduct}/add
     defaults: { _controller: MyShopDefaultBundle:Basket:addToBasket }
+    requirements:
+         idProduct: \d+
+
+myshop.confirm_order:
+    path: /basket/confirm
+    defaults: { _controller: MyShopDefaultBundle:Basket:confirm }
+
+myshop.history_order:
+    path: /orders/history
+    defaults: { _controller: MyShopDefaultBundle:Basket:historyOrder }
+
+myshop.order_product:
+    path: /orders/{id}/product
+    defaults: { _controller: MyShopDefaultBundle:Basket:orderProduct}
+    requirements:
+            id: \d+
+
+myshop.remove_order_product:
+    path: /basket/remove/{id}/product
+    defaults: { _controller: MyShopDefaultBundle:Basket:removeOrderProduct }
+    requirements:
+            id: \d+
+
+myshop.recalculate_price:
+    path: /basket/recalculate/price
+    defaults: { _controller: MyShopDefaultBundle:Basket:recalculationCurrentPrice }
 
 myshop.page:
     path: /{pageKey}

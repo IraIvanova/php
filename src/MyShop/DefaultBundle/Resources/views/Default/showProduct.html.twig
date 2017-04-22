@@ -56,14 +56,18 @@
                                     <input type="hidden" name="cmd" value="_cart">
                                     <input type="hidden" name="add" value="1">
                                     <input type="hidden" name="business" value=" ">
-                                    <input type="hidden" name="item_name" value="pulao basmati rice">
-                                    <input type="hidden" name="amount" value="21.00">
-                                    <input type="hidden" name="discount_amount" value="1.00">
-                                    <input type="hidden" name="currency_code" value="USD">
-                                    <input type="hidden" name="return" value=" ">
-                                    <input type="hidden" name="cancel_return" value=" ">
-                                    <a href="{{ path('myshop.add_to_basket') }}"><input type="submit" name="submit" value="Добавить в корзину" class="button"></a>
-                                </fieldset>
+                                    <input type="hidden" name="item_name" value="{{ product.getModel() }}">
+                                    <input type="hidden" name="amount" value="{{ product.price }}">
+                                    {#<input type="hidden" name="discount_amount" value="1.00">#}
+                                    {#<input type="hidden" name="currency_code" value="USD">#}
+                                    {#<input type="hidden" name="return" value=" ">#}
+                                    {#<input type="hidden" name="cancel_return" value=" ">#}
+                                   {% if product.status == constant("\\MyShop\\DefaultBundle\\Entity\\Product::AVAILABLE") %}
+                                    <a href="{{ path('myshop.add_to_basket', {idProduct:product.id}) }}">Добавить в корзину</a>
+                                {%  else %}
+                                    product is not available
+                                    {% endif %}
+                                       </fieldset>
                             </form>
                         </div>
                     </div>

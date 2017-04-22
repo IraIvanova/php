@@ -31,6 +31,11 @@ class ProductType extends AbstractType
             ->add('description', CKEditorType::class, [
                 'label' => "Описание товара"
             ])
+            ->add('status', ChoiceType::class, [
+                'choices' => [
+                    'Доступен' => '1',
+                    'Нет' => '2' ]
+            ])
             ->add('category', EntityType::class, [
                 "class" => "MyShopDefaultBundle:Category",
                 "choice_label" => "name",

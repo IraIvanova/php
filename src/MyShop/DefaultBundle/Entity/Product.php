@@ -14,6 +14,10 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Product implements \JsonSerializable
 {
+
+    const AVAILABLE = 1;
+    const NOT_AVAILABLE = 2;
+
     /**
      * @var int
      *
@@ -115,6 +119,30 @@ class Product implements \JsonSerializable
      */
     private $comments;
 
+    /**
+     * @var int
+     * @ORM\Column(name="status", type="string", length=255)
+     **/
+    private $status;
+
+
+    /**
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param int $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+
+
 
  
     public function jsonSerialize()
@@ -148,6 +176,8 @@ class Product implements \JsonSerializable
         $this->setDateCreatedAt($date);
 
         $this->photos = new ArrayCollection();
+
+        $this->status= self::AVAILABLE;
     }
 
     /**

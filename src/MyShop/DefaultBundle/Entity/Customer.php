@@ -26,7 +26,7 @@ class Customer implements UserInterface, \Serializable
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=255)
+     * @ORM\Column(name="email", type="string", length=255, unique=true)
      */
     private $email;
 
@@ -185,6 +185,8 @@ class Customer implements UserInterface, \Serializable
             $this->getUsername(),
             $this->getPassword()
         ]);
+        
+        return $data;
     }
 
     public function getRoles()
@@ -221,6 +223,7 @@ class Customer implements UserInterface, \Serializable
      */
     public function addOrder(\MyShop\DefaultBundle\Entity\CustomerOrder $order)
     {
+        $order->setCustomer($this);
         $this->orders[] = $order;
 
         return $this;

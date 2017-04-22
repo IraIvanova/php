@@ -45,19 +45,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <p>СКИДКИ до 70% . <a href="#">Купить сейчас</a></p>
         </div>
         <div class="agile-login">
-            <ul>
-                <li><a href="{{ path('myshop.customer_registration') }}"> Создать аккаунт </a></li>
-                <li><a href="{{ path('login_customer') }}">Войти</a></li>
-                <li><a href="#">Помощь</a></li>
 
-            </ul>
+
+
+            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                <a href="{{ path('logout_customer') }}">Выход</a>
+
+            {% else %}
+                <ul>
+                    <li><a href="{{ path('myshop.customer_registration') }}"> Создать аккаунт </a></li>
+                    <li><a href="{{ path('login_customer') }}">Войти</a></li>
+                    <li><a href="#">Помощь</a></li>
+                </ul>
+            {% endif %}
+            {#<ul>#}
+                {#<li><a href="{{ path('myshop.customer_registration') }}"> Создать аккаунт </a></li>#}
+                {#<li><a href="{{ path('login_customer') }}">Войти</a></li>#}
+                {#<li><a href="#">Помощь</a></li>#}
+
+            {#</ul>#}
         </div>
         <div class="product_list_header">
-            <form action="{{ path('myshop.add_to_basket') }}" method="post" class="last">
-                <input type="hidden" name="cmd" value="_cart">
-                <input type="hidden" name="display" value="1">
-                <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
-            </form>
+            {#<form action="{{ path('myshop.add_to_basket') }}" method="post" class="last">#}
+                {#<input type="hidden" name="cmd" value="_cart">#}
+                {#<input type="hidden" name="display" value="1">#}
+                {#<button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>#}
+            {#</form>#}
         </div>
         <div class="clearfix"> </div>
     </div>
@@ -94,7 +107,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
+{% for flash_message in app.session.flashBag.get('success') %}
+    <div class="flash-notice alert" role="alert">
+        <b>{{ flash_message }}<script>
 
+                alert({{ flash_message }});
+
+            </script></b>
+    </div>
+{% endfor %}
 {% block body %}{% endblock %}
 
 <!-- //footer -->
@@ -185,14 +206,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script>
     // Mini Cart
     paypal.minicart.render({
-        action: '#'
+        action: 'myshop.add_to_basket'
     });
 
     if (~window.location.search.indexOf('reset=true')) {
         paypal.minicart.reset();
     }
 </script>
+ {#<script>#}
+ {#var flashNotice = document.getElementsByClassName('flash-notice');#}
+     {#alert(flashNotice.{{ flash_message }})#}
 
+ {#</script>#}
 
 
 

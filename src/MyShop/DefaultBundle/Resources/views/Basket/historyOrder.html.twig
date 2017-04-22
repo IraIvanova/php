@@ -1,0 +1,65 @@
+{% extends "@MyShopDefault/layout.html.twig" %}
+{% block body %}
+
+
+    <div class="checkout">
+        <div class="container">
+            <h2>Your orders history</h2>
+
+            <div class="checkout-right">
+
+                <table class="timetable_sub">
+                    <thead>
+                    <tr>
+
+                        {#<th>Product</th>#}
+                        <th>Date</th>
+                        <th>Phone number</th>
+                        <th>Status</th>
+                        {#<th>Count</th>#}
+                        <th>Price</th>
+                        <th>Show products</th>
+
+                    </tr>
+                    </thead>
+                    {% for order in orders %}
+                        <tr class="rem1">
+                            <td class="invert">{{ order.dateCreated.format("H:i d-m-Y") }}</td>
+                            {#<td class="invert-image"><a href="single.html">{{ product.model }}</a></td>#}
+                            <td class="invert">{{ order.phoneNumber }}</td>
+                            {#<div class="quantity">#}
+                            {#<div class="quantity-select">#}
+                            {#<div class="entry value-minus">&nbsp;</div>#}
+                            {#<div class="entry value"><span>{{ product.count }}</span></div>#}
+                            {#<div class="entry value-plus active">&nbsp;</div>#}
+                            {#</div>#}
+                            {#</div>#}
+                            {#</td>#}
+                            <td class="invert">
+                        {% if order.status == constant("\\MyShop\\DefaultBundle\\Entity\\CustomerOrder::STATUS_OPEN") %}
+                            in process
+                            {% elseif order.status == constant("\\MyShop\\DefaultBundle\\Entity\\CustomerOrder::STATUS_DONE") %}
+                                closed
+                            {% else  %}
+                                    rejected
+                            {% endif %}
+                        </td>
+                            {#<td class="invert">{{ order. }}</td>#}
+
+                            <td class="invert">{{ order.getTotalPrice() }}</td>
+                            <td class="invert"><a href="{{ path('myshop.order_product', {id:order.id}) }}">Show</a></td>
+                            {#<td class="invert">#}
+                            {#<div class="rem">#}
+                            {#<div class="close1"> </div>#}
+                            {#</div>#}
+
+                            {#</td>#}
+                        </tr>
+                    {% endfor %}
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

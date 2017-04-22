@@ -57,6 +57,14 @@ class OrderProduct
      */
     private $order;
 
+    public function getTotalPrice()
+    {
+        $sum = $this->getPrice() * $this->getCount();
+        return $sum;
+    }
+
+    
+
     /**
      * Get id
      *

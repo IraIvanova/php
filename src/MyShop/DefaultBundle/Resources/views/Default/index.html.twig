@@ -90,9 +90,9 @@
                                                                                    value=" "/>
 
                                                                             <input type="hidden" name="item_name"
-                                                                                   value="Fortune Sunflower Oil"/>
+                                                                                   value={{ product.getModel() }}>
                                                                             <input type="hidden" name="amount"
-                                                                                   value="20.99"/>
+                                                                                   value={{ product.price }}>
                                                                             <input type="hidden" name="discount_amount"
                                                                                    value="1.00"/>
                                                                             <input type="hidden" name="currency_code"
@@ -101,8 +101,9 @@
                                                                                    value=" "/>
                                                                             <input type="hidden" name="cancel_return"
                                                                                    value=" "/>
-                                                                            <input type="submit" name="submit"
-                                                                                   value="Add to cart" class="button"/>
+                                                                            <a href="{{ path('myshop.add_to_basket', {idProduct:product.id}) }}">Add to cart</a>
+                                                                            {#<input type="submit" name="submit" class="button" value="Add to cart" /></a>#}
+
                                                                         </fieldset>
                                                                     </form>
                                                                 </div>
